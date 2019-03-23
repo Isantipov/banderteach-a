@@ -241,7 +241,7 @@ module.exports = "/* HeroesComponent's private CSS styles */\n.selected {\n  bac
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>My Heroes</h2>\n\n<ul class=\"heroes\">\n  <li *ngFor=\"let hero of heroes\"\n    [class.selected]=\"hero === selectedHero\"\n    (click)=\"onSelect(hero)\">\n    <span class=\"badge\">{{hero.id}}</span> {{hero.name}}\n  </li>\n</ul>\n<!-- <div style=\"height:720px;width:400px;border:2px dashed black\" ></div> -->\n<img src=\"./assets/tree.jpg\"/>\n<app-hero-detail [hero]=\"selectedHero\"></app-hero-detail>\n"
+module.exports = "<h2>{{appTitle}}</h2>\n\n<ul class=\"heroes\">\n  <li *ngFor=\"let hero of heroes\"\n    [class.selected]=\"hero === selectedHero\"\n    (click)=\"onSelect(hero)\">\n    <span class=\"badge\">{{hero.id}}</span> {{hero.name}}\n  </li>\n</ul>\n<!-- <div style=\"height:720px;width:400px;border:2px dashed black\" ></div> -->\n<img src=\"./assets/tree.jpg\"/>\n<app-hero-detail [hero]=\"selectedHero\"></app-hero-detail>\n"
 
 /***/ }),
 
@@ -271,11 +271,13 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var HeroesComponent = /** @class */ (function () {
     function HeroesComponent() {
         this.heroes = _mock_heroes__WEBPACK_IMPORTED_MODULE_1__["HEROES"];
+        this.appTitle = 'test';
     }
     HeroesComponent.prototype.ngOnInit = function () {
     };
     HeroesComponent.prototype.onSelect = function (hero) {
         this.selectedHero = hero;
+        this.appTitle = "selected hero is " + hero.name;
     };
     HeroesComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
