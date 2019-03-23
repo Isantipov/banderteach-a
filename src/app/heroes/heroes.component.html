@@ -1,0 +1,12 @@
+<h2>My Heroes</h2>
+
+<ul class="heroes">
+  <li *ngFor="let hero of heroes"
+    [class.selected]="hero === selectedHero"
+    (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+<!-- <div style="height:720px;width:400px;border:2px dashed black" ></div> -->
+<img src="./assets/tree.jpg"/>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
