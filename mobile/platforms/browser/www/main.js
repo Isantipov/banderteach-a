@@ -155,7 +155,7 @@ module.exports = ".location {height: 100%;}\r\n.scene {\r\n    position: absolut
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<img class=\"location\" src=\"./assets/{{background}}\"/>\n<div class=\"scene\" style=\"\">\n  <img class=\"actor\" src=\"./assets/{{actorImg}}\"/>\n  <div class=\"message\">\n    {{message}}\n  </div>\n  <ul class=\"choices\">\n    <li *ngFor=\"let choice of choices\">\n      <!-- [class.selected]=\"hero === selectedHero\" -->\n      <!-- (click)=\"onSelect(hero)\" -->\n      <!-- > -->\n      {{choice.text}}\n    </li>\n  </ul>\n</div>"
+module.exports = "\n<img class=\"location\" src=\"./assets/{{currentSlide.background}}\"/>\n<div class=\"scene\" style=\"\">\n  <img class=\"actor\" src=\"./assets/{{currentSlide.actorImg}}\"/>\n  <div class=\"message\">\n    {{currentSlide.message}}\n  </div>\n  <ul class=\"choices\">\n    <li *ngFor=\"let choice of currentSlide.choices\"\n      (click)=\"onSelect(choice)\"\n      >\n      {{choice.text}}\n    </li>\n  </ul>\n</div>"
 
 /***/ }),
 
@@ -163,14 +163,14 @@ module.exports = "\n<img class=\"location\" src=\"./assets/{{background}}\"/>\n<
 /*!****************************************!*\
   !*** ./src/app/game/game.component.ts ***!
   \****************************************/
-/*! exports provided: GameComponent, Choice */
+/*! exports provided: GameComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GameComponent", function() { return GameComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Choice", function() { return Choice; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _scenario__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scenario */ "./src/app/game/scenario.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -181,27 +181,40 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+// import { Scenario } from './scenario';
 var GameComponent = /** @class */ (function () {
     function GameComponent() {
-        this.background = 'coworking.jpg';
-        this.actorImg = 'Ales.png';
-        this.message = 'Так игрушки, говоришь? Так может пусть лучше играют?';
-        this.choices = [
-            {
-                id: 'slide_a_choice_a',
-                text: 'Сдаюсь, пусть играют, я опускаю руки'
-            },
-            {
-                id: 'slide_a_choice_b',
-                text: 'Нет, игры отдельно, уроки отдельно!'
-            },
-            {
-                id: 'slide_a_choice_c',
-                text: 'Хм, может действительно призвать игры в союзники…'
-            }
-        ];
+        this.currentSlide = {
+            id: 'first',
+            background: 'coworking.jpg',
+            actorImg: 'Ales.png',
+            message: 'Так игрушки, говоришь? Так может пусть лучше играют?',
+            choices: [
+                {
+                    id: 'slide_a_choice_a',
+                    text: 'Сдаюсь, пусть играют, я опускаю руки',
+                    effects: [{ kind: _scenario__WEBPACK_IMPORTED_MODULE_1__["EffectKind"].CounterInc, counterName: 'a', counterIncValue: 1 }]
+                },
+                {
+                    id: 'slide_a_choice_b',
+                    text: 'Нет, игры отдельно, уроки отдельно!',
+                    effects: [
+                        { kind: _scenario__WEBPACK_IMPORTED_MODULE_1__["EffectKind"].CounterInc, counterName: 'b', counterIncValue: 2 },
+                        { kind: _scenario__WEBPACK_IMPORTED_MODULE_1__["EffectKind"].NextSlide, nextSlide: 'slide_beta' },
+                    ]
+                },
+                {
+                    id: 'slide_a_choice_c',
+                    text: 'Хм, может действительно призвать игры в союзники…'
+                }
+            ]
+        };
     }
     GameComponent.prototype.ngOnInit = function () {
+    };
+    GameComponent.prototype.onSelect = function (choice) {
+        alert(JSON.stringify(choice));
     };
     GameComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -214,12 +227,85 @@ var GameComponent = /** @class */ (function () {
     return GameComponent;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/app/game/scenario.ts":
+/*!**********************************!*\
+  !*** ./src/app/game/scenario.ts ***!
+  \**********************************/
+/*! exports provided: Choice, Effect, EffectKind, Slide, Scenario */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Choice", function() { return Choice; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Effect", function() { return Effect; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EffectKind", function() { return EffectKind; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Slide", function() { return Slide; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Scenario", function() { return Scenario; });
 var Choice = /** @class */ (function () {
     function Choice() {
+        this.effects = [];
     }
     return Choice;
 }());
 
+var Effect = /** @class */ (function () {
+    function Effect() {
+    }
+    return Effect;
+}());
+
+var EffectKind;
+(function (EffectKind) {
+    EffectKind["CounterInc"] = "CounterInc";
+    EffectKind["NextSlide"] = "NextSlide";
+})(EffectKind || (EffectKind = {}));
+var Slide = /** @class */ (function () {
+    function Slide() {
+    }
+    return Slide;
+}());
+
+var Scenario = {
+    name: "Мова",
+    items: [
+        {
+            id: 'first',
+            background: 'coworking.jpg',
+            actorImg: 'Ales.png',
+            message: 'Так игрушки, говоришь? Так может пусть лучше играют?',
+            nextSlide: 'second',
+            choices: [
+                {
+                    id: 'slide_a_choice_a',
+                    text: 'Сдаюсь, пусть играют, я опускаю руки',
+                    effects: [{ kind: EffectKind.CounterInc, counterName: 'a', counterIncValue: 1 }]
+                },
+                {
+                    id: 'slide_a_choice_b',
+                    text: 'Нет, игры отдельно, уроки отдельно!',
+                    effects: [
+                        { kind: EffectKind.CounterInc, counterName: 'b', counterIncValue: 2 },
+                        { kind: EffectKind.NextSlide, nextSlide: 'slide_beta' },
+                    ]
+                },
+                {
+                    id: 'slide_a_choice_c',
+                    text: 'Хм, может действительно призвать игры в союзники…'
+                }
+            ]
+        },
+        {
+            id: 'second',
+            background: 'accelerator.jpg',
+            actorImg: 'Alex.png',
+            message: 'Так игрушки, говоришь? Так может пусть лучше играют?',
+        }
+    ]
+};
 
 
 /***/ }),
