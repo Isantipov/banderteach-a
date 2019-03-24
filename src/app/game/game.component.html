@@ -1,12 +1,12 @@
 
-<img class="location" src="./assets/{{background}}"/>
+<img class="location" src="./assets/{{currentSlide.background}}"/>
 <div class="scene" style="">
-  <img class="actor" src="./assets/{{actorImg}}"/>
+  <img class="actor" src="./assets/{{currentSlide.actorImg}}"/>
   <div class="message">
-    {{message}}
+    {{currentSlide.message}}
   </div>
   <ul class="choices">
-    <li *ngFor="let choice of choices"
+    <li *ngFor="let choice of currentSlide.choices"
       (click)="onSelect(choice)"
       >
       {{choice.text}}
