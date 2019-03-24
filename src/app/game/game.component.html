@@ -1,15 +1,14 @@
-
-<img class="location" src="./assets/{{currentSlide.background}}"/>
-<div class="scene" style="">
-  <img class="actor" src="./assets/{{currentSlide.actorImg}}"/>
-  <div class="message">
-    {{currentSlide.message}}
+<div (click)="onClick()">
+  <img class="location" src="./assets/{{currentSlide.background}}" />
+  <div class="scene" style="">
+    <img class="actor" src="./assets/{{currentSlide.actorImg}}" />
+    <div class="message">
+      {{currentSlide.message}}
+    </div>
+    <ul class="choices">
+      <li *ngFor="let choice of currentSlide.choices" (click)="onSelect(choice, $event)">
+        {{choice.text}}
+      </li>
+    </ul>
   </div>
-  <ul class="choices">
-    <li *ngFor="let choice of currentSlide.choices"
-      (click)="onSelect(choice)"
-      >
-      {{choice.text}}
-    </li>
-  </ul>
 </div>

@@ -14,14 +14,19 @@ export class GameComponent implements OnInit {
   ngOnInit() {
   }
 
+  onClick(): void{
+    if(this.currentSlide.choices == null || this.currentSlide.choices == [])
+      this.currentSlide = this.sc.items[this.currentSlide.nextSlide];
+  }
 
-  onSelect(choice: Choice): void {
-    alert(JSON.stringify(choice));
+  onSelect(choice: Choice,event: Event): void {
+    // alert(JSON.stringify(choice));
     var nextSlide = this.currentSlide.nextSlide;
     if(choice.nextSlide != null)
       nextSlide = choice.nextSlide;
 
     this.currentSlide = this.sc.items[nextSlide];
+    event.stopPropagation();
   }
   playerName: string;
   sc = SCENARIO;
