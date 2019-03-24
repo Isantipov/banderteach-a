@@ -219,11 +219,17 @@ var GameComponent = /** @class */ (function () {
             this.currentSlide = this.sc.items[this.currentSlide.nextSlide];
     };
     GameComponent.prototype.onSelect = function (choice, event) {
+        var _this = this;
         // alert(JSON.stringify(choice));
         var nextSlide = this.currentSlide.nextSlide;
         if (choice.nextSlide != null)
             nextSlide = choice.nextSlide;
         this.chosen[this.currentSlide.id + '_' + choice.id] = true;
+        if (choice.effects != null) {
+            choice.effects.forEach(function (effect) {
+                _this.sc.counters[effect.counterName].values.push(effect.counterIncValue);
+            });
+        }
         this.currentSlide = this.sc.items[nextSlide];
         event.stopPropagation();
     };
@@ -299,6 +305,14 @@ var SCENARIO = {
         'Alex.png': 'Алекс',
         'mom.png': 'Мама'
     },
+    counters: {
+        'global': { type: 'avg', values: [] },
+        'a': { type: 'sum', values: [] },
+        'b': { type: 'sum', values: [] },
+        'c': { type: 'sum', values: [] },
+        'd': { type: 'sum', values: [] },
+        'e': { type: 'sum', values: [] }
+    },
     entry: 'first',
     items: {
         first: {
@@ -311,14 +325,18 @@ var SCENARIO = {
                 {
                     id: 'slide_a_choice_a',
                     text: 'Сдаюсь, пусть играют, я опускаю руки',
-                    effects: [{ kind: EffectKind.CounterInc, counterName: 'a', counterIncValue: 1 }],
+                    effects: [
+                        { kind: EffectKind.CounterInc, counterName: 'a', counterIncValue: 1 },
+                        { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 10 }
+                    ],
                     nextSlide: 'third'
                 },
                 {
                     id: 'slide_a_choice_b',
                     text: 'Нет, игры отдельно, уроки отдельно!',
                     effects: [
-                        { kind: EffectKind.CounterInc, counterName: 'b', counterIncValue: 2 }
+                        { kind: EffectKind.CounterInc, counterName: 'b', counterIncValue: 1 },
+                        { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 20 }
                     ]
                 },
                 {
@@ -340,6 +358,32 @@ var SCENARIO = {
             actorImg: 'mom.png',
             message: 'Slide three',
             nextSlide: 'fourth',
+            choices: [
+                {
+                    id: 'a',
+                    text: 'choice a',
+                    effects: [
+                        { kind: EffectKind.CounterInc, counterName: 'a', counterIncValue: 1 },
+                        { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 10 }
+                    ],
+                },
+                {
+                    id: 'b',
+                    text: 'choice b',
+                    effects: [
+                        { kind: EffectKind.CounterInc, counterName: 'b', counterIncValue: 1 },
+                        { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 20 }
+                    ]
+                },
+                {
+                    id: 'c',
+                    text: 'choice c',
+                    effects: [
+                        { kind: EffectKind.CounterInc, counterName: 'e', counterIncValue: 1 },
+                        { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 50 }
+                    ]
+                }
+            ]
         },
         fourth: {
             background: 'accelerator.jpg',

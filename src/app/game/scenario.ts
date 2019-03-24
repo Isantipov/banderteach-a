@@ -34,6 +34,15 @@ export const SCENARIO: any = {
     'Alex.png': 'Алекс',
     'mom.png': 'Мама'
   },
+  counters:
+  {
+    'global': { type: 'avg', values: [] },
+    'a': { type: 'sum', values: [] },
+    'b': { type: 'sum', values: [] },
+    'c': { type: 'sum', values: [] },
+    'd': { type: 'sum', values: [] },
+    'e': { type: 'sum', values: [] }
+  },
 
   entry: 'first',
   items: {
@@ -47,14 +56,17 @@ export const SCENARIO: any = {
         {
           id: 'slide_a_choice_a',
           text: 'Сдаюсь, пусть играют, я опускаю руки',
-          effects: [{ kind: EffectKind.CounterInc, counterName: 'a', counterIncValue: 1 }],
+          effects: [
+            { kind: EffectKind.CounterInc, counterName: 'a', counterIncValue: 1 },
+            { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 10 }],
           nextSlide: 'third'
         },
         {
           id: 'slide_a_choice_b',
           text: 'Нет, игры отдельно, уроки отдельно!',
           effects: [
-            { kind: EffectKind.CounterInc, counterName: 'b', counterIncValue: 2 }
+            { kind: EffectKind.CounterInc, counterName: 'b', counterIncValue: 1 },
+            { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 20 }
           ]
         },
         {
@@ -76,6 +88,32 @@ export const SCENARIO: any = {
       actorImg: 'mom.png',
       message: 'Slide three',
       nextSlide: 'fourth',
+      choices: [
+        {
+          id: 'a',
+          text: 'choice a',
+          effects: [
+            { kind: EffectKind.CounterInc, counterName: 'a', counterIncValue: 1 },
+            { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 10 }],
+          
+        },
+        {
+          id: 'b',
+          text: 'choice b',
+          effects: [
+            { kind: EffectKind.CounterInc, counterName: 'b', counterIncValue: 1 },
+            { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 20 }
+          ]
+        },
+        {
+          id: 'c',
+          text: 'choice c',
+          effects: [
+            { kind: EffectKind.CounterInc, counterName: 'e', counterIncValue: 1 },
+            { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 50 }
+          ]
+        }
+      ]
     },
     fourth: {
       background: 'accelerator.jpg',

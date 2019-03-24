@@ -177,17 +177,40 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 
 
 // import { Scenario } from './scenario';
 var GameComponent = /** @class */ (function () {
     function GameComponent() {
+        this.chosen = {};
         this.sc = _scenario__WEBPACK_IMPORTED_MODULE_1__["SCENARIO"];
         this.currentSlide = this.sc.items[this.sc.entry];
         this.gameInitialized = false;
+        //   {
+        //   id: 'first',
+        //   background : 'coworking.jpg',
+        //   actorImg: 'Ales.png',
+        //   message: 'Так игрушки, говоришь? Так может пусть лучше играют?',
+        //   choices: [
+        //     {
+        //       id: 'slide_a_choice_a',
+        //       text: 'Сдаюсь, пусть играют, я опускаю руки',
+        //       effects: [{ kind: EffectKind.CounterInc, counterName: 'a', counterIncValue: 1 }]
+        //     },
+        //     {
+        //       id: 'slide_a_choice_b',
+        //       text: 'Нет, игры отдельно, уроки отдельно!',
+        //       effects: [
+        //         { kind: EffectKind.CounterInc, counterName: 'b', counterIncValue: 2 },
+        //         { kind: EffectKind.NextSlide, nextSlide: 'slide_beta' },
+        //       ]
+        //     },
+        //     {
+        //       id: 'slide_a_choice_c',
+        //       text: 'Хм, может действительно призвать игры в союзники…'
+        //     }
+        //   ]
+        // }
     }
     GameComponent.prototype.ngOnInit = function () {
     };
@@ -200,6 +223,7 @@ var GameComponent = /** @class */ (function () {
         var nextSlide = this.currentSlide.nextSlide;
         if (choice.nextSlide != null)
             nextSlide = choice.nextSlide;
+        this.chosen[this.currentSlide.id + '_' + choice.id] = true;
         this.currentSlide = this.sc.items[nextSlide];
         event.stopPropagation();
     };
@@ -221,8 +245,7 @@ var GameComponent = /** @class */ (function () {
             selector: 'app-game',
             template: __webpack_require__(/*! ./game.component.html */ "./src/app/game/game.component.html"),
             styles: [__webpack_require__(/*! ./game.component.css */ "./src/app/game/game.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
+        })
     ], GameComponent);
     return GameComponent;
 }());
