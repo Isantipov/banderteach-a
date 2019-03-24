@@ -38,7 +38,7 @@ export class GameComponent implements OnInit {
       next.initialize(this.sc);
     }
 
-    this.currentSlide = this.sc.items[slideId];
+    this.currentSlide = next;
 
   }
 

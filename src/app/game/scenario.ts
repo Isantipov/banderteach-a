@@ -257,10 +257,189 @@ export const SCENARIO: any = {
       background: 'store.jpg',
       actorImg: 'MC.png',
       message: 'Ахах, тогда можа мне праверыць?',
-      nextSlide: 's_27',
+      nextSlide: 's_29',
       choices: [],
       initialize: (scenario) => {
           scenario.items.s_28.message = 'Я ' + scenario.playerName + '. Ты спешишь?';
+      }
+    },
+    s_29: {
+      background: 'store.jpg',
+      actorImg: 'LI.png',
+      message: 'А я Вераніка. Не, не паспяшаю.',
+      nextSlide: 's_30',
+      choices: []
+    },
+    s_30: {
+      id: 's_30',
+      background: 'store.jpg',
+      actorImg: 'MC.png',
+      message: 'Можна зап-ра-сіць ця-бе ў:',
+      nextSlide: 's_31',
+      choices: [
+        {
+          id: 'a',
+          text: 'кино',
+          effects: [],
+          nextSlide: 's_31'
+        },
+        {
+          id: 'b',
+          text: 'кафе',
+          effects: [],
+        },
+        {
+          id: 'c',
+          text: 'парк',
+          effects: []
+        }
+      ]
+    },
+    s_31: {
+      background: 'movie.jpg',
+      actorImg: 'LI.png',
+      message: 'Ну як табе фільм?',
+      nextSlide: 's_32',
+      choices: [],
+      initialize: (scenario) => {
+        var current = scenario.items.s_31; 
+        if(scenario.chosen['s_30_a']){
+          current.background = 'movie.jpg';
+        }
+        if(scenario.chosen['s_30_b']){
+          current.background = 'cafe.jpg';
+          current.message = 'Смачная кава?';
+        }
+        if(scenario.chosen['s_30_c']){
+          current.background = 'park.jpg';
+          current.message = 'Якое цудоўнае надвор\'е!';
+        }
+      }
+    },
+    s_32: {
+      background: 'movie.jpg',
+      actorImg: 'MC.png',
+      message: 'Супер. Слушай, а почему ты стала разговаривать на мове??',
+      nextSlide: 's_33',
+      choices: [],
+      initialize: (scenario) => {
+        var current = scenario.items.s_32; 
+        if(scenario.chosen['s_30_a']){
+          current.background = 'movie.jpg';
+        }
+        if(scenario.chosen['s_30_b']){
+          current.background = 'cafe.jpg';
+          // current.message = 'Смачная кава?';
+        }
+        if(scenario.chosen['s_30_c']){
+          current.background = 'park.jpg';
+          // current.message = 'Якое цудоўнае надвор\'е!';
+        }
+      }
+    },
+    s_33: {
+      background: 'movie.jpg',
+      actorImg: 'LI.png',
+      message: 'Гэта цяжка растлумачыць, разумееш? Яно ўнутры недзе.?',
+      nextSlide: 's_34',
+      choices: [],
+      initialize: (scenario) => {
+        var current = scenario.items.s_33; 
+        if(scenario.chosen['s_30_a']){
+          current.background = 'movie.jpg';
+        }
+        if(scenario.chosen['s_30_b']){
+          current.background = 'cafe.jpg';
+          // current.message = 'Смачная кава?';
+        }
+        if(scenario.chosen['s_30_c']){
+          current.background = 'park.jpg';
+          // current.message = 'Якое цудоўнае надвор\'е!';
+        }
+      }
+    },
+    s_34: {
+      background: 'movie.jpg',
+      actorImg: 'LI.png',
+      message: ' У мяне быў цудоўны настаўнік беларускай мовы. Аднак я ніяк не магла пачаць размаўляць з ім на мове… Хаця яна мне вельмі падабалася.',
+      nextSlide: 's_35',
+      choices: [],
+      initialize: (scenario) => {
+        var current = scenario.items.s_34; 
+        if(scenario.chosen['s_30_a']){
+          current.background = 'movie.jpg';
+        }
+        if(scenario.chosen['s_30_b']){
+          current.background = 'cafe.jpg';
+          // current.message = 'Смачная кава?';
+        }
+        if(scenario.chosen['s_30_c']){
+          current.background = 'park.jpg';
+          // current.message = 'Якое цудоўнае надвор\'е!';
+        }
+      }
+    },
+    s_35: {
+      background: 'movie.jpg',
+      actorImg: 'LI.png',
+      message: 'Я лічу, што гэта больш, чым мова. Я адчуваю, што калі я размаўляю па-руску, я адмаўляюся ад частачкі сябе,нейкая такая сувязь з мінулым, магія',
+      nextSlide: 's_36',
+      choices: [],
+      initialize: (scenario) => {
+        var current = scenario.items.s_35; 
+        if(scenario.chosen['s_30_a']){
+          current.background = 'movie.jpg';
+        }
+        if(scenario.chosen['s_30_b']){
+          current.background = 'cafe.jpg';
+          // current.message = 'Смачная кава?';
+        }
+        if(scenario.chosen['s_30_c']){
+          current.background = 'park.jpg';
+          // current.message = 'Якое цудоўнае надвор\'е!';
+        }
+      }
+    },
+    s_36: {
+      background: 'movie.jpg',
+      actorImg: 'LI.png',
+      message: 'Гэта робіць мяне адначасова і асаблівай, і часткай нечага важлівага... Мова для мяне стала самым важным выбарам...',
+      nextSlide: 's_37',
+      choices: [],
+      initialize: (scenario) => {
+        var current = scenario.items.s_36; 
+        if(scenario.chosen['s_30_a']){
+          current.background = 'movie.jpg';
+        }
+        if(scenario.chosen['s_30_b']){
+          current.background = 'cafe.jpg';
+          // current.message = 'Смачная кава?';
+        }
+        if(scenario.chosen['s_30_c']){
+          current.background = 'park.jpg';
+          // current.message = 'Якое цудоўнае надвор\'е!';
+        }
+      }
+    },
+    s_37: {
+      background: 'movie.jpg',
+      actorImg: 'MC.png',
+      message: 'Это тяжко - разговаривать в нашей стране на беларускай мове… TO BE CONTINUED',
+      nextSlide: 's_37',
+      choices: [],
+      initialize: (scenario) => {
+        var current = scenario.items.s_37; 
+        if(scenario.chosen['s_30_a']){
+          current.background = 'movie.jpg';
+        }
+        if(scenario.chosen['s_30_b']){
+          current.background = 'cafe.jpg';
+          // current.message = 'Смачная кава?';
+        }
+        if(scenario.chosen['s_30_c']){
+          current.background = 'park.jpg';
+          // current.message = 'Якое цудоўнае надвор\'е!';
+        }
       }
     },
     oios_19: {

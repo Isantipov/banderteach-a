@@ -215,7 +215,7 @@ var GameComponent = /** @class */ (function () {
     };
     GameComponent.prototype.onClick = function () {
         if (this.currentSlide.choices == null || this.currentSlide.choices.length == 0)
-            this.currentSlide = this.sc.items[this.currentSlide.nextSlide];
+            this.activateSlide(this.currentSlide.nextSlide);
     };
     GameComponent.prototype.onSelect = function (choice, event) {
         var _this = this;
@@ -237,7 +237,7 @@ var GameComponent = /** @class */ (function () {
         if (next.initialize != null) {
             next.initialize(this.sc);
         }
-        this.currentSlide = this.sc.items[slideId];
+        this.currentSlide = next;
     };
     Object.defineProperty(GameComponent.prototype, "actorName", {
         get: function () {
@@ -251,6 +251,7 @@ var GameComponent = /** @class */ (function () {
     });
     GameComponent.prototype.initialize = function () {
         this.gameInitialized = true;
+        this.sc.playerName = this.playerName;
     };
     GameComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -310,7 +311,7 @@ var SCENARIO = {
     actorNames: {
         'Ales.png': 'Алесь',
         'Alex.png': 'Алекс',
-        'mom.png': 'Мама'
+        'LI.png': 'Вераніка'
     },
     counters: {
         'global': { type: 'avg', values: [] },
@@ -362,43 +363,369 @@ var SCENARIO = {
             background: 'school.jpg',
             actorImg: 'Alex.png',
             message: 'Привет, друг, я не писал этот тест.',
-            nextSlide: 's_6',
+            nextSlide: 's_7',
             choices: []
         },
-        third: {
-            id: 'third',
-            background: 'accelerator.jpg',
-            actorImg: 'mom.png',
-            message: 'Slide three',
-            nextSlide: 'fourth',
+        s_7: {
+            background: 'school.jpg',
+            actorImg: 'MC.png',
+            message: 'Я конечно понимаю, что ты новенький, но ты же в своей прошлой школе учил мову. А тест, почему-то, все равно не пишешь…Особенный, что ли?',
+            nextSlide: 's_8',
+            choices: []
+        },
+        s_8: {
+            background: 'school.jpg',
+            actorImg: 'Alex.png',
+            message: 'Ну можно и так сказать. Мы только-только переехали с родителями из Тарту, поэтому белорусский язык для меня пока что почти как иностранный… Я его только вот сейчас на этих уроках впервые услышал.',
+            nextSlide: 's_9',
+            choices: []
+        },
+        s_9: {
+            background: 'school.jpg',
+            actorImg: 'MC.png',
+            message: 'Ну да, тут у нас его редко услышишь, разве что Алеся нашего послушать!',
+            nextSlide: 's_10',
+            choices: []
+        },
+        s_10: {
+            background: 'school.jpg',
+            actorImg: 'Alex.png',
+            message: 'Вот мне всегда интересно было, почему белорусы не говорят по-белорусски?',
+            nextSlide: 's_11',
+            choices: []
+        },
+        s_11: {
+            background: 'school.jpg',
+            actorImg: 'MC.png',
+            message: 'Не знаю, так исторически сложилось, наверное…',
+            nextSlide: 's_12',
+            choices: []
+        },
+        s_12: {
+            background: 'school.jpg',
+            actorImg: 'Alex.png',
+            message: 'У тебя в семье все тоже по-русски разговаривают?',
+            nextSlide: 's_13',
+            choices: []
+        },
+        s_13: {
+            background: 'school.jpg',
+            actorImg: 'MC.png',
+            message: 'Ага, ну почти, бабуля на трасянке шпарит. Но так она из деревни!',
+            nextSlide: 's_14',
+            choices: []
+        },
+        s_14: {
+            background: 'school.jpg',
+            actorImg: 'Alex.png',
+            message: 'А что такое "трасянка"?',
+            nextSlide: 's_15',
+            choices: []
+        },
+        s_15: {
+            background: 'school.jpg',
+            actorImg: 'MC.png',
+            message: 'О, да ты совсем не в теме. Короче, смотри, трасянка - это такая острая смесь с русского и белорусского. Ну, например, "я пайшоў аддыхаць". Ахах.',
+            nextSlide: 's_16',
+            choices: []
+        },
+        s_16: {
+            background: 'school.jpg',
+            actorImg: 'Alex.png',
+            message: 'Интересно как! Ну будешь меня просвещать теперь в вопросе таких особенностей?',
+            nextSlide: 's_17',
+            choices: []
+        },
+        s_17: {
+            background: 'school.jpg',
+            actorImg: 'MC.png',
+            message: 'Да без проблем. Обращайся!',
+            nextSlide: 's_18',
+            choices: []
+        },
+        s_18: {
+            background: 'school.jpg',
+            actorImg: 'MC.png',
+            message: 'Ну всё, наконец-то уроки закончились… Пятница, красота! Куда б пойти?',
+            nextSlide: 's_19',
             choices: [
                 {
                     id: 'a',
-                    text: 'choice a',
-                    effects: [
-                        { kind: EffectKind.CounterInc, counterName: 'a', counterIncValue: 1 },
-                        { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 10 }
-                    ],
+                    text: 'В кино',
+                    effects: [],
                 },
                 {
-                    id: 'b',
-                    text: 'choice b',
-                    effects: [
-                        { kind: EffectKind.CounterInc, counterName: 'b', counterIncValue: 1 },
-                        { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 20 }
-                    ]
+                    id: 'a',
+                    text: 'В кафе',
+                    effects: [],
                 },
                 {
                     id: 'c',
-                    text: 'choice c',
-                    effects: [
-                        { kind: EffectKind.CounterInc, counterName: 'e', counterIncValue: 1 },
-                        { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 50 }
-                    ]
+                    text: 'В парк',
+                    effects: []
                 }
-            ],
+            ]
+        },
+        s_19: {
+            background: 'store.jpg',
+            actorImg: 'MC.png',
+            message: 'Хмм, что бы выбрать... О, сейчас глянем, что народ берет!',
+            nextSlide: 's_20',
+            choices: []
+        },
+        s_20: {
+            background: 'store.jpg',
+            actorImg: 'MC.png',
+            message: 'Слушай, вкусное мороженое вот это, которое ты сейчас взяла?',
+            nextSlide: 's_21',
+            choices: []
+        },
+        s_21: {
+            background: 'store.jpg',
+            actorImg: 'LI.png',
+            message: 'Ага, смачнае :)',
+            nextSlide: 's_22',
+            choices: []
+        },
+        s_22: {
+            background: 'store.jpg',
+            actorImg: 'MC.png',
+            message: 'То есть вкусное?',
+            nextSlide: 's_23',
+            choices: []
+        },
+        s_23: {
+            background: 'store.jpg',
+            actorImg: 'LI.png',
+            message: 'То бок смачнае;)',
+            nextSlide: 's_24',
+            choices: []
+        },
+        s_24: {
+            background: 'store.jpg',
+            actorImg: 'MC.png',
+            message: 'Ты только по-белорусски разговаривать умеешь?',
+            nextSlide: 's_25',
+            choices: []
+        },
+        s_25: {
+            background: 'store.jpg',
+            actorImg: 'LI.png',
+            message: 'Можа быць, пакуль не праверыш, не даведаешся.',
+            nextSlide: 's_26',
+            choices: []
+        },
+        s_26: {
+            background: 'store.jpg',
+            actorImg: 'MC.png',
+            message: 'Ахах, тогда можа мне праверыць?',
+            nextSlide: 's_27',
+            choices: []
+        },
+        s_27: {
+            background: 'store.jpg',
+            actorImg: 'LI.png',
+            message: 'Можа:)',
+            nextSlide: 's_28',
+            choices: []
+        },
+        s_28: {
+            background: 'store.jpg',
+            actorImg: 'MC.png',
+            message: 'Ахах, тогда можа мне праверыць?',
+            nextSlide: 's_29',
+            choices: [],
             initialize: function (scenario) {
-                if (scenario.chosen['first_a']) {
+                scenario.items.s_28.message = 'Я ' + scenario.playerName + '. Ты спешишь?';
+            }
+        },
+        s_29: {
+            background: 'store.jpg',
+            actorImg: 'LI.png',
+            message: 'А я Вераніка. Не, не паспяшаю.',
+            nextSlide: 's_30',
+            choices: []
+        },
+        s_30: {
+            id: 's_30',
+            background: 'store.jpg',
+            actorImg: 'MC.png',
+            message: 'Можна зап-ра-сіць ця-бе ў:',
+            nextSlide: 's_31',
+            choices: [
+                {
+                    id: 'a',
+                    text: 'кино',
+                    effects: [],
+                    nextSlide: 's_31'
+                },
+                {
+                    id: 'b',
+                    text: 'кафе',
+                    effects: [],
+                },
+                {
+                    id: 'c',
+                    text: 'парк',
+                    effects: []
+                }
+            ]
+        },
+        s_31: {
+            background: 'movie.jpg',
+            actorImg: 'LI.png',
+            message: 'Ну як табе фільм?',
+            nextSlide: 's_32',
+            choices: [],
+            initialize: function (scenario) {
+                var current = scenario.items.s_31;
+                if (scenario.chosen['s_30_a']) {
+                    current.background = 'movie.jpg';
+                }
+                if (scenario.chosen['s_30_b']) {
+                    current.background = 'cafe.jpg';
+                    current.message = 'Смачная кава?';
+                }
+                if (scenario.chosen['s_30_c']) {
+                    current.background = 'park.jpg';
+                    current.message = 'Якое цудоўнае надвор\'е!';
+                }
+            }
+        },
+        s_32: {
+            background: 'movie.jpg',
+            actorImg: 'MC.png',
+            message: 'Супер. Слушай, а почему ты стала разговаривать на мове??',
+            nextSlide: 's_33',
+            choices: [],
+            initialize: function (scenario) {
+                var current = scenario.items.s_32;
+                if (scenario.chosen['s_30_a']) {
+                    current.background = 'movie.jpg';
+                }
+                if (scenario.chosen['s_30_b']) {
+                    current.background = 'cafe.jpg';
+                    // current.message = 'Смачная кава?';
+                }
+                if (scenario.chosen['s_30_c']) {
+                    current.background = 'park.jpg';
+                    // current.message = 'Якое цудоўнае надвор\'е!';
+                }
+            }
+        },
+        s_33: {
+            background: 'movie.jpg',
+            actorImg: 'LI.png',
+            message: 'Гэта цяжка растлумачыць, разумееш? Яно ўнутры недзе.?',
+            nextSlide: 's_34',
+            choices: [],
+            initialize: function (scenario) {
+                var current = scenario.items.s_33;
+                if (scenario.chosen['s_30_a']) {
+                    current.background = 'movie.jpg';
+                }
+                if (scenario.chosen['s_30_b']) {
+                    current.background = 'cafe.jpg';
+                    // current.message = 'Смачная кава?';
+                }
+                if (scenario.chosen['s_30_c']) {
+                    current.background = 'park.jpg';
+                    // current.message = 'Якое цудоўнае надвор\'е!';
+                }
+            }
+        },
+        s_34: {
+            background: 'movie.jpg',
+            actorImg: 'LI.png',
+            message: ' У мяне быў цудоўны настаўнік беларускай мовы. Аднак я ніяк не магла пачаць размаўляць з ім на мове… Хаця яна мне вельмі падабалася.',
+            nextSlide: 's_35',
+            choices: [],
+            initialize: function (scenario) {
+                var current = scenario.items.s_34;
+                if (scenario.chosen['s_30_a']) {
+                    current.background = 'movie.jpg';
+                }
+                if (scenario.chosen['s_30_b']) {
+                    current.background = 'cafe.jpg';
+                    // current.message = 'Смачная кава?';
+                }
+                if (scenario.chosen['s_30_c']) {
+                    current.background = 'park.jpg';
+                    // current.message = 'Якое цудоўнае надвор\'е!';
+                }
+            }
+        },
+        s_35: {
+            background: 'movie.jpg',
+            actorImg: 'LI.png',
+            message: 'Я лічу, што гэта больш, чым мова. Я адчуваю, што калі я размаўляю па-руску, я адмаўляюся ад частачкі сябе,нейкая такая сувязь з мінулым, магія',
+            nextSlide: 's_36',
+            choices: [],
+            initialize: function (scenario) {
+                var current = scenario.items.s_35;
+                if (scenario.chosen['s_30_a']) {
+                    current.background = 'movie.jpg';
+                }
+                if (scenario.chosen['s_30_b']) {
+                    current.background = 'cafe.jpg';
+                    // current.message = 'Смачная кава?';
+                }
+                if (scenario.chosen['s_30_c']) {
+                    current.background = 'park.jpg';
+                    // current.message = 'Якое цудоўнае надвор\'е!';
+                }
+            }
+        },
+        s_36: {
+            background: 'movie.jpg',
+            actorImg: 'LI.png',
+            message: 'Гэта робіць мяне адначасова і асаблівай, і часткай нечага важлівага... Мова для мяне стала самым важным выбарам...',
+            nextSlide: 's_37',
+            choices: [],
+            initialize: function (scenario) {
+                var current = scenario.items.s_36;
+                if (scenario.chosen['s_30_a']) {
+                    current.background = 'movie.jpg';
+                }
+                if (scenario.chosen['s_30_b']) {
+                    current.background = 'cafe.jpg';
+                    // current.message = 'Смачная кава?';
+                }
+                if (scenario.chosen['s_30_c']) {
+                    current.background = 'park.jpg';
+                    // current.message = 'Якое цудоўнае надвор\'е!';
+                }
+            }
+        },
+        s_37: {
+            background: 'movie.jpg',
+            actorImg: 'MC.png',
+            message: 'Это тяжко - разговаривать в нашей стране на беларускай мове… TO BE CONTINUED',
+            nextSlide: 's_37',
+            choices: [],
+            initialize: function (scenario) {
+                var current = scenario.items.s_37;
+                if (scenario.chosen['s_30_a']) {
+                    current.background = 'movie.jpg';
+                }
+                if (scenario.chosen['s_30_b']) {
+                    current.background = 'cafe.jpg';
+                    // current.message = 'Смачная кава?';
+                }
+                if (scenario.chosen['s_30_c']) {
+                    current.background = 'park.jpg';
+                    // current.message = 'Якое цудоўнае надвор\'е!';
+                }
+            }
+        },
+        oios_19: {
+            background: '',
+            actorImg: 'MC.png',
+            message: 'Так, осталось только в магазин за мороженным-  и в путь!',
+            nextSlide: 's_19',
+            choices: [],
+            initialize: function (scenario) {
+                if (scenario.chosen['s_18_a']) {
                     scenario.items.third.background = 'home.jpg';
                 }
             }
