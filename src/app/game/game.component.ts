@@ -15,5 +15,23 @@ export class GameComponent implements OnInit {
   background: string = 'coworking.jpg';
   actorImg: string = 'Ales.png';
   message: string = 'Так игрушки, говоришь? Так может пусть лучше играют?';
+  choices: Choice[] = [
+    {
+      id: 'slide_a_choice_a',
+      text: 'Сдаюсь, пусть играют, я опускаю руки'
+    },
+    {
+      id: 'slide_a_choice_b',
+      text: 'Нет, игры отдельно, уроки отдельно!'
+    },
+    {
+      id: 'slide_a_choice_c',
+      text: 'Хм, может действительно призвать игры в союзники…'
+    }
+  ]
+}
 
+export class Choice {
+  id: string;
+  text: string;
 }

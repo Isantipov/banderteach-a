@@ -5,4 +5,12 @@
   <div class="message">
     {{message}}
   </div>
+  <ul class="choices">
+    <li *ngFor="let choice of choices">
+      <!-- [class.selected]="hero === selectedHero" -->
+      <!-- (click)="onSelect(hero)" -->
+      <!-- > -->
+      {{choice.text}}
+    </li>
+  </ul>
 </div>
