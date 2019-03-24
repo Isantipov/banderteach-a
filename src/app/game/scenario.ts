@@ -15,7 +15,7 @@ export enum EffectKind {
   NextSlide = "NextSlide"
 }
 
-export class Slide{
+export class Slide {
   id: string;
   background: string;
   actorImg: string;
@@ -25,14 +25,15 @@ export class Slide{
 }
 
 
-export const Scenario ={
-  name : "Мова",
-  items : [
-    {
-      id:'first',
-      background : 'coworking.jpg',
+export const SCENARIO: any = {
+  name: "Мова",
+  entry: 'first',
+  items: {
+    first: {
+      id: 'first',
+      background: 'coworking.jpg',
       actorImg: 'Ales.png',
-      message:  'Так игрушки, говоришь? Так может пусть лучше играют?',
+      message: 'Так игрушки, говоришь? Так может пусть лучше играют?',
       nextSlide: 'second',
       choices: [
         {
@@ -54,11 +55,11 @@ export const Scenario ={
         }
       ]
     },
-    {
+    second: {
       id: 'second',
-      background : 'accelerator.jpg',
+      background: 'accelerator.jpg',
       actorImg: 'Alex.png',
-      message:  'Так игрушки, говоришь? Так может пусть лучше играют?',
+      message: 'Так игрушки, говоришь? Так может пусть лучше играют?',
     }
-  ]
-}
+  }
+};
