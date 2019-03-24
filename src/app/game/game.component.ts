@@ -13,7 +13,7 @@ export class GameComponent implements OnInit {
   }
 
   onClick(): void {
-    if (this.currentSlide.choices == null || this.currentSlide.choices == [])
+    if (this.currentSlide.choices == null || this.currentSlide.choices.length == 0)
       this.currentSlide = this.sc.items[this.currentSlide.nextSlide];
   }
 
