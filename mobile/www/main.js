@@ -144,7 +144,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".location {height: 100%;}\r\n.scene {\r\n    position: absolute;\r\n    top: 100px; \r\n}\r\n.actor{\r\n    height: 30vh;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ2FtZS9nYW1lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsV0FBVyxhQUFhLENBQUM7QUFDekI7SUFDSSxtQkFBbUI7SUFDbkIsV0FBVztDQUNkO0FBRUQ7SUFDSSxhQUFhO0NBQ2hCIiwiZmlsZSI6InNyYy9hcHAvZ2FtZS9nYW1lLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubG9jYXRpb24ge2hlaWdodDogMTAwJTt9XHJcbi5zY2VuZSB7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IDEwMHB4OyBcclxufVxyXG5cclxuLmFjdG9ye1xyXG4gICAgaGVpZ2h0OiAzMHZoO1xyXG59Il19 */"
+module.exports = ".location {height: 100%;}\r\n.scene {\r\n    position: absolute;\r\n    top: 100px; \r\n    margin: 0 0 2em 0;\r\n    padding: 0;\r\n    width: 15em;\r\n}\r\n.message  {\r\n    position: relative;\r\n    left: 0;\r\n    background-color: #00BFFF;\r\n    margin: .5em;\r\n    padding: .5em .5em;\r\n    border-radius: 4px;\r\n    color: white;\r\n}\r\n.actor{\r\n    height: 30vh;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ2FtZS9nYW1lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsV0FBVyxhQUFhLENBQUM7QUFDekI7SUFDSSxtQkFBbUI7SUFDbkIsV0FBVztJQUNYLGtCQUFrQjtJQUNsQixXQUFXO0lBQ1gsWUFBWTtDQUNmO0FBQ0Q7SUFDSSxtQkFBbUI7SUFDbkIsUUFBUTtJQUNSLDBCQUEwQjtJQUMxQixhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLG1CQUFtQjtJQUNuQixhQUFhO0NBQ2hCO0FBR0Q7SUFDSSxhQUFhO0NBQ2hCIiwiZmlsZSI6InNyYy9hcHAvZ2FtZS9nYW1lLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubG9jYXRpb24ge2hlaWdodDogMTAwJTt9XHJcbi5zY2VuZSB7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IDEwMHB4OyBcclxuICAgIG1hcmdpbjogMCAwIDJlbSAwO1xyXG4gICAgcGFkZGluZzogMDtcclxuICAgIHdpZHRoOiAxNWVtO1xyXG59XHJcbi5tZXNzYWdlICB7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICBsZWZ0OiAwO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzAwQkZGRjtcclxuICAgIG1hcmdpbjogLjVlbTtcclxuICAgIHBhZGRpbmc6IC41ZW0gLjVlbTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDRweDtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxufVxyXG5cclxuXHJcbi5hY3RvcntcclxuICAgIGhlaWdodDogMzB2aDtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -155,7 +155,7 @@ module.exports = ".location {height: 100%;}\r\n.scene {\r\n    position: absolut
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<img class=\"location\" src=\"./assets/{{background}}\"/>\n<div class=\"scene\" style=\"\">\n  <img class=\"actor\" src=\"./assets/{{actorImg}}\"/>\n</div>"
+module.exports = "\n<img class=\"location\" src=\"./assets/{{background}}\"/>\n<div class=\"scene\" style=\"\">\n  <img class=\"actor\" src=\"./assets/{{actorImg}}\"/>\n  <div class=\"message\">\n    {{message}}\n  </div>\n</div>"
 
 /***/ }),
 
@@ -184,6 +184,7 @@ var GameComponent = /** @class */ (function () {
     function GameComponent() {
         this.background = 'coworking.jpg';
         this.actorImg = 'Ales.png';
+        this.message = 'Так игрушки, говоришь? Так может пусть лучше играют?';
     }
     GameComponent.prototype.ngOnInit = function () {
     };

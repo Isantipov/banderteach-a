@@ -14,5 +14,6 @@ export class GameComponent implements OnInit {
 
   background: string = 'coworking.jpg';
   actorImg: string = 'Ales.png';
+  message: string = 'Так игрушки, говоришь? Так может пусть лучше играют?';
 
 }
