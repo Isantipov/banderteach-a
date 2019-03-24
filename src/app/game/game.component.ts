@@ -12,4 +12,6 @@ export class GameComponent implements OnInit {
   ngOnInit() {
   }
 
+  background: string = 'coworking.jpg';
+
 }
