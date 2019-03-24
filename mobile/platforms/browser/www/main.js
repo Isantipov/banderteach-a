@@ -144,7 +144,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".location {height: 100%;}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ2FtZS9nYW1lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsV0FBVyxhQUFhLENBQUMiLCJmaWxlIjoic3JjL2FwcC9nYW1lL2dhbWUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5sb2NhdGlvbiB7aGVpZ2h0OiAxMDAlO30iXX0= */"
+module.exports = ".location {height: 100%;}\r\n.scene {\r\n    position: absolute;\r\n    top: 100px; \r\n}\r\n.actor{\r\n    height: 30vh;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ2FtZS9nYW1lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsV0FBVyxhQUFhLENBQUM7QUFDekI7SUFDSSxtQkFBbUI7SUFDbkIsV0FBVztDQUNkO0FBRUQ7SUFDSSxhQUFhO0NBQ2hCIiwiZmlsZSI6InNyYy9hcHAvZ2FtZS9nYW1lLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubG9jYXRpb24ge2hlaWdodDogMTAwJTt9XHJcbi5zY2VuZSB7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IDEwMHB4OyBcclxufVxyXG5cclxuLmFjdG9ye1xyXG4gICAgaGVpZ2h0OiAzMHZoO1xyXG59Il19 */"
 
 /***/ }),
 
@@ -155,7 +155,7 @@ module.exports = ".location {height: 100%;}\n/*# sourceMappingURL=data:applicati
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<img class=\"location\" src=\"./assets/{{background}}\"/>"
+module.exports = "\n<img class=\"location\" src=\"./assets/{{background}}\"/>\n<div class=\"scene\" style=\"\">\n  <img class=\"actor\" src=\"./assets/{{actorImg}}\"/>\n</div>"
 
 /***/ }),
 
@@ -183,6 +183,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var GameComponent = /** @class */ (function () {
     function GameComponent() {
         this.background = 'coworking.jpg';
+        this.actorImg = 'Ales.png';
     }
     GameComponent.prototype.ngOnInit = function () {
     };

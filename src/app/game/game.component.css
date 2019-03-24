@@ -1,1 +1,9 @@
 .location {height: 100%;}
+.scene {
+    position: absolute;
+    top: 100px; 
+}
+
+.actor{
+    height: 30vh;
+}

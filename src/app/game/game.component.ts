@@ -13,5 +13,6 @@ export class GameComponent implements OnInit {
   }
 
   background: string = 'coworking.jpg';
+  actorImg: string = 'Ales.png';
 
 }
