@@ -144,7 +144,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".location {height: 100%;}\r\n.scene {\r\n    position: absolute;\r\n    top: 100px; \r\n    margin: 0 0 2em 0;\r\n    padding: 0;\r\n    width: 75%vw;\r\n}\r\n.message  {\r\n    position: relative;\r\n    left: 0;\r\n    background-color: #00BFFF;\r\n    margin: .5em;\r\n    padding: .5em .5em;\r\n    border-radius: 4px;\r\n    color: white;\r\n}\r\n.hidden {\r\n    display: none;\r\n}\r\n.actor{\r\n    height: 30vh;\r\n}\r\n.actorName{\r\n    position: relative;\r\n    left: 0;\r\n    background-color: #00BFFF;\r\n    margin: .5em;\r\n    padding: .5em .5em;\r\n    border-radius: 4px;\r\n    color: #2A52BE;\r\n}\r\n.choices{\r\n    list-style-type: none;\r\n    }\r\n.choices li {\r\n        cursor: pointer;\r\n        position: relative;\r\n        left: 0;\r\n        background-color: #EEE;\r\n        margin: .5em;\r\n        padding: .3em 0;\r\n        /* height: 1.6em; */\r\n        border-radius: 4px;\r\n    }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ2FtZS9nYW1lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsV0FBVyxhQUFhLENBQUM7QUFDekI7SUFDSSxtQkFBbUI7SUFDbkIsV0FBVztJQUNYLGtCQUFrQjtJQUNsQixXQUFXO0lBQ1gsYUFBYTtDQUNoQjtBQUNEO0lBQ0ksbUJBQW1CO0lBQ25CLFFBQVE7SUFDUiwwQkFBMEI7SUFDMUIsYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixtQkFBbUI7SUFDbkIsYUFBYTtDQUNoQjtBQUNEO0lBQ0ksY0FBYztDQUNqQjtBQUVEO0lBQ0ksYUFBYTtDQUNoQjtBQUNEO0lBQ0ksbUJBQW1CO0lBQ25CLFFBQVE7SUFDUiwwQkFBMEI7SUFDMUIsYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixtQkFBbUI7SUFDbkIsZUFBZTtDQUNsQjtBQUNEO0lBQ0ksc0JBQXNCO0tBQ3JCO0FBQ0Q7UUFDSSxnQkFBZ0I7UUFDaEIsbUJBQW1CO1FBQ25CLFFBQVE7UUFDUix1QkFBdUI7UUFDdkIsYUFBYTtRQUNiLGdCQUFnQjtRQUNoQixvQkFBb0I7UUFDcEIsbUJBQW1CO0tBQ3RCIiwiZmlsZSI6InNyYy9hcHAvZ2FtZS9nYW1lLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubG9jYXRpb24ge2hlaWdodDogMTAwJTt9XHJcbi5zY2VuZSB7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IDEwMHB4OyBcclxuICAgIG1hcmdpbjogMCAwIDJlbSAwO1xyXG4gICAgcGFkZGluZzogMDtcclxuICAgIHdpZHRoOiA3NSV2dztcclxufVxyXG4ubWVzc2FnZSAge1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgbGVmdDogMDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMwMEJGRkY7XHJcbiAgICBtYXJnaW46IC41ZW07XHJcbiAgICBwYWRkaW5nOiAuNWVtIC41ZW07XHJcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbn1cclxuLmhpZGRlbiB7XHJcbiAgICBkaXNwbGF5OiBub25lO1xyXG59XHJcblxyXG4uYWN0b3J7XHJcbiAgICBoZWlnaHQ6IDMwdmg7XHJcbn1cclxuLmFjdG9yTmFtZXtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIGxlZnQ6IDA7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDBCRkZGO1xyXG4gICAgbWFyZ2luOiAuNWVtO1xyXG4gICAgcGFkZGluZzogLjVlbSAuNWVtO1xyXG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xyXG4gICAgY29sb3I6ICMyQTUyQkU7XHJcbn1cclxuLmNob2ljZXN7XHJcbiAgICBsaXN0LXN0eWxlLXR5cGU6IG5vbmU7XHJcbiAgICB9XHJcbiAgICAuY2hvaWNlcyBsaSB7XHJcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgICAgICBsZWZ0OiAwO1xyXG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNFRUU7XHJcbiAgICAgICAgbWFyZ2luOiAuNWVtO1xyXG4gICAgICAgIHBhZGRpbmc6IC4zZW0gMDtcclxuICAgICAgICAvKiBoZWlnaHQ6IDEuNmVtOyAqL1xyXG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcclxuICAgIH0iXX0= */"
+module.exports = ".location {height: 100%;}\r\n.scene {\r\n    position: absolute;\r\n    top: 100px; \r\n    margin: 0 0 2em 0;\r\n    padding: 0;\r\n    width: 75%;\r\n}\r\n.message  {\r\n    position: relative;\r\n    left: 0;\r\n    background-color: #00BFFF;\r\n    margin: .5em;\r\n    padding: .5em .5em;\r\n    border-radius: 4px;\r\n    color: white;\r\n}\r\n.hidden {\r\n    display: none;\r\n}\r\n.actor{\r\n    height: 30vh;\r\n}\r\n.actorName{\r\n    position: relative;\r\n    left: 0;\r\n    background-color: #00BFFF;\r\n    margin: .5em;\r\n    padding: .5em .5em;\r\n    border-radius: 4px;\r\n    color: #2A52BE;\r\n}\r\n.choices{\r\n    list-style-type: none;\r\n    }\r\n.choices li {\r\n        cursor: pointer;\r\n        position: relative;\r\n        left: 0;\r\n        background-color: #EEE;\r\n        margin: .5em;\r\n        padding: .3em 0;\r\n        /* height: 1.6em; */\r\n        border-radius: 4px;\r\n    }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ2FtZS9nYW1lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsV0FBVyxhQUFhLENBQUM7QUFDekI7SUFDSSxtQkFBbUI7SUFDbkIsV0FBVztJQUNYLGtCQUFrQjtJQUNsQixXQUFXO0lBQ1gsV0FBVztDQUNkO0FBQ0Q7SUFDSSxtQkFBbUI7SUFDbkIsUUFBUTtJQUNSLDBCQUEwQjtJQUMxQixhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLG1CQUFtQjtJQUNuQixhQUFhO0NBQ2hCO0FBQ0Q7SUFDSSxjQUFjO0NBQ2pCO0FBRUQ7SUFDSSxhQUFhO0NBQ2hCO0FBQ0Q7SUFDSSxtQkFBbUI7SUFDbkIsUUFBUTtJQUNSLDBCQUEwQjtJQUMxQixhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLG1CQUFtQjtJQUNuQixlQUFlO0NBQ2xCO0FBQ0Q7SUFDSSxzQkFBc0I7S0FDckI7QUFDRDtRQUNJLGdCQUFnQjtRQUNoQixtQkFBbUI7UUFDbkIsUUFBUTtRQUNSLHVCQUF1QjtRQUN2QixhQUFhO1FBQ2IsZ0JBQWdCO1FBQ2hCLG9CQUFvQjtRQUNwQixtQkFBbUI7S0FDdEIiLCJmaWxlIjoic3JjL2FwcC9nYW1lL2dhbWUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5sb2NhdGlvbiB7aGVpZ2h0OiAxMDAlO31cclxuLnNjZW5lIHtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHRvcDogMTAwcHg7IFxyXG4gICAgbWFyZ2luOiAwIDAgMmVtIDA7XHJcbiAgICBwYWRkaW5nOiAwO1xyXG4gICAgd2lkdGg6IDc1JTtcclxufVxyXG4ubWVzc2FnZSAge1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgbGVmdDogMDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMwMEJGRkY7XHJcbiAgICBtYXJnaW46IC41ZW07XHJcbiAgICBwYWRkaW5nOiAuNWVtIC41ZW07XHJcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbn1cclxuLmhpZGRlbiB7XHJcbiAgICBkaXNwbGF5OiBub25lO1xyXG59XHJcblxyXG4uYWN0b3J7XHJcbiAgICBoZWlnaHQ6IDMwdmg7XHJcbn1cclxuLmFjdG9yTmFtZXtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIGxlZnQ6IDA7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDBCRkZGO1xyXG4gICAgbWFyZ2luOiAuNWVtO1xyXG4gICAgcGFkZGluZzogLjVlbSAuNWVtO1xyXG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xyXG4gICAgY29sb3I6ICMyQTUyQkU7XHJcbn1cclxuLmNob2ljZXN7XHJcbiAgICBsaXN0LXN0eWxlLXR5cGU6IG5vbmU7XHJcbiAgICB9XHJcbiAgICAuY2hvaWNlcyBsaSB7XHJcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgICAgICBsZWZ0OiAwO1xyXG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNFRUU7XHJcbiAgICAgICAgbWFyZ2luOiAuNWVtO1xyXG4gICAgICAgIHBhZGRpbmc6IC4zZW0gMDtcclxuICAgICAgICAvKiBoZWlnaHQ6IDEuNmVtOyAqL1xyXG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcclxuICAgIH0iXX0= */"
 
 /***/ }),
 
@@ -182,7 +182,6 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 // import { Scenario } from './scenario';
 var GameComponent = /** @class */ (function () {
     function GameComponent() {
-        this.chosen = {};
         this.sc = _scenario__WEBPACK_IMPORTED_MODULE_1__["SCENARIO"];
         this.currentSlide = this.sc.items[this.sc.entry];
         this.gameInitialized = false;
@@ -215,17 +214,30 @@ var GameComponent = /** @class */ (function () {
     GameComponent.prototype.ngOnInit = function () {
     };
     GameComponent.prototype.onClick = function () {
-        if (this.currentSlide.choices == null || this.currentSlide.choices == [])
+        if (this.currentSlide.choices == null || this.currentSlide.choices.length == 0)
             this.currentSlide = this.sc.items[this.currentSlide.nextSlide];
     };
     GameComponent.prototype.onSelect = function (choice, event) {
+        var _this = this;
         // alert(JSON.stringify(choice));
         var nextSlide = this.currentSlide.nextSlide;
         if (choice.nextSlide != null)
             nextSlide = choice.nextSlide;
-        this.chosen[this.currentSlide.id + '_' + choice.id] = true;
-        this.currentSlide = this.sc.items[nextSlide];
+        this.sc.chosen[this.currentSlide.id + '_' + choice.id] = true;
+        if (choice.effects != null) {
+            choice.effects.forEach(function (effect) {
+                _this.sc.counters[effect.counterName].values.push(effect.counterIncValue);
+            });
+        }
+        this.activateSlide(nextSlide);
         event.stopPropagation();
+    };
+    GameComponent.prototype.activateSlide = function (slideId) {
+        var next = this.sc.items[slideId];
+        if (next.initialize != null) {
+            next.initialize(this.sc);
+        }
+        this.currentSlide = this.sc.items[slideId];
     };
     Object.defineProperty(GameComponent.prototype, "actorName", {
         get: function () {
@@ -258,7 +270,7 @@ var GameComponent = /** @class */ (function () {
 /*!**********************************!*\
   !*** ./src/app/game/scenario.ts ***!
   \**********************************/
-/*! exports provided: Choice, Effect, EffectKind, Slide, SCENARIO */
+/*! exports provided: Choice, Effect, EffectKind, Slide, SCENARIO, SCENARIO_old */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -268,6 +280,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EffectKind", function() { return EffectKind; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Slide", function() { return Slide; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SCENARIO", function() { return SCENARIO; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SCENARIO_old", function() { return SCENARIO_old; });
 var Choice = /** @class */ (function () {
     function Choice() {
         this.effects = [];
@@ -299,6 +312,133 @@ var SCENARIO = {
         'Alex.png': 'Алекс',
         'mom.png': 'Мама'
     },
+    counters: {
+        'global': { type: 'avg', values: [] },
+        'a': { type: 'sum', values: [] },
+        'b': { type: 'sum', values: [] },
+        'c': { type: 'sum', values: [] },
+        'd': { type: 'sum', values: [] },
+        'e': { type: 'sum', values: [] }
+    },
+    chosen: {},
+    entry: 's_1',
+    items: {
+        's_1': {
+            background: 'school.jpg',
+            actorImg: 'MC.png',
+            message: 'Уфф, наконец можно отдохнуть …. 8 балов за тест по-белорусскому!! Эту бы восьмерку в аттестат, будет вообще очень круто!',
+            nextSlide: 's_2',
+            choices: []
+        },
+        's_2': {
+            background: 'school.jpg',
+            actorImg: 'MC.png',
+            message: 'Алесь, ты на что тест написал?',
+            nextSlide: 's_3',
+            choices: []
+        },
+        s_3: {
+            background: 'school.jpg',
+            actorImg: 'Ales.png',
+            message: 'А ты як думаеш? Натуральна на "10"! :)',
+            nextSlide: 's_4',
+            choices: []
+        },
+        s_4: {
+            background: 'school.jpg',
+            actorImg: 'MC.png',
+            message: 'Ну конечно, если бы мои родители разговаривали на мове, я бы тоже тесты на "10" писал!',
+            nextSlide: 's_5',
+            choices: []
+        },
+        s_5: {
+            background: 'school.jpg',
+            actorImg: 'MC.png',
+            message: 'Привет, ты ведь Алекс, да? Ты на сколько тест написал?',
+            nextSlide: 's_6',
+            choices: []
+        },
+        s_6: {
+            background: 'school.jpg',
+            actorImg: 'Alex.png',
+            message: 'Привет, друг, я не писал этот тест.',
+            nextSlide: 's_6',
+            choices: []
+        },
+        third: {
+            id: 'third',
+            background: 'accelerator.jpg',
+            actorImg: 'mom.png',
+            message: 'Slide three',
+            nextSlide: 'fourth',
+            choices: [
+                {
+                    id: 'a',
+                    text: 'choice a',
+                    effects: [
+                        { kind: EffectKind.CounterInc, counterName: 'a', counterIncValue: 1 },
+                        { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 10 }
+                    ],
+                },
+                {
+                    id: 'b',
+                    text: 'choice b',
+                    effects: [
+                        { kind: EffectKind.CounterInc, counterName: 'b', counterIncValue: 1 },
+                        { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 20 }
+                    ]
+                },
+                {
+                    id: 'c',
+                    text: 'choice c',
+                    effects: [
+                        { kind: EffectKind.CounterInc, counterName: 'e', counterIncValue: 1 },
+                        { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 50 }
+                    ]
+                }
+            ],
+            initialize: function (scenario) {
+                if (scenario.chosen['first_a']) {
+                    scenario.items.third.background = 'home.jpg';
+                }
+            }
+        },
+        fourth: {
+            background: 'accelerator.jpg',
+            actorImg: 'Ales.png',
+            message: 'Slide 4',
+            nextSlide: 'fifth',
+        },
+        fifth: {
+            background: 'home.jpg',
+            actorImg: 'Daria.png',
+            message: 'Daria speaking slide 5',
+            nextSlide: 'sixth',
+        },
+        sixth: {
+            background: 'cafe.jpg',
+            actorImg: 'MC.png',
+            message: 'FINITA',
+            nextSlide: null
+        }
+    }
+};
+var SCENARIO_old = {
+    name: "Мова",
+    actorNames: {
+        'Ales.png': 'Алесь',
+        'Alex.png': 'Алекс',
+        'mom.png': 'Мама'
+    },
+    counters: {
+        'global': { type: 'avg', values: [] },
+        'a': { type: 'sum', values: [] },
+        'b': { type: 'sum', values: [] },
+        'c': { type: 'sum', values: [] },
+        'd': { type: 'sum', values: [] },
+        'e': { type: 'sum', values: [] }
+    },
+    chosen: {},
     entry: 'first',
     items: {
         first: {
@@ -309,16 +449,20 @@ var SCENARIO = {
             nextSlide: 'second',
             choices: [
                 {
-                    id: 'slide_a_choice_a',
+                    id: 'a',
                     text: 'Сдаюсь, пусть играют, я опускаю руки',
-                    effects: [{ kind: EffectKind.CounterInc, counterName: 'a', counterIncValue: 1 }],
+                    effects: [
+                        { kind: EffectKind.CounterInc, counterName: 'a', counterIncValue: 1 },
+                        { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 10 }
+                    ],
                     nextSlide: 'third'
                 },
                 {
                     id: 'slide_a_choice_b',
                     text: 'Нет, игры отдельно, уроки отдельно!',
                     effects: [
-                        { kind: EffectKind.CounterInc, counterName: 'b', counterIncValue: 2 }
+                        { kind: EffectKind.CounterInc, counterName: 'b', counterIncValue: 1 },
+                        { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 20 }
                     ]
                 },
                 {
@@ -340,6 +484,37 @@ var SCENARIO = {
             actorImg: 'mom.png',
             message: 'Slide three',
             nextSlide: 'fourth',
+            choices: [
+                {
+                    id: 'a',
+                    text: 'choice a',
+                    effects: [
+                        { kind: EffectKind.CounterInc, counterName: 'a', counterIncValue: 1 },
+                        { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 10 }
+                    ],
+                },
+                {
+                    id: 'b',
+                    text: 'choice b',
+                    effects: [
+                        { kind: EffectKind.CounterInc, counterName: 'b', counterIncValue: 1 },
+                        { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 20 }
+                    ]
+                },
+                {
+                    id: 'c',
+                    text: 'choice c',
+                    effects: [
+                        { kind: EffectKind.CounterInc, counterName: 'e', counterIncValue: 1 },
+                        { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 50 }
+                    ]
+                }
+            ],
+            initialize: function (scenario) {
+                if (scenario.chosen['first_a']) {
+                    scenario.items.third.background = 'home.jpg';
+                }
+            }
         },
         fourth: {
             background: 'accelerator.jpg',

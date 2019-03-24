@@ -33,7 +33,7 @@ export const SCENARIO: any = {
   {
     'Ales.png': 'Алесь',
     'Alex.png': 'Алекс',
-    'mom.png': 'Мама'
+    'LI.png': 'Вераніка'
   },
   counters:
   {
@@ -87,43 +87,181 @@ export const SCENARIO: any = {
       background: 'school.jpg',
       actorImg: 'Alex.png',
       message: 'Привет, друг, я не писал этот тест.',
-      nextSlide: 's_6',
+      nextSlide: 's_7',
       choices: []
     },
-    third: {
-      id: 'third',
-      background: 'accelerator.jpg',
-      actorImg: 'mom.png',
-      message: 'Slide three',
-      nextSlide: 'fourth',
+    s_7: {
+      background: 'school.jpg',
+      actorImg: 'MC.png',
+      message: 'Я конечно понимаю, что ты новенький, но ты же в своей прошлой школе учил мову. А тест, почему-то, все равно не пишешь…Особенный, что ли?',
+      nextSlide: 's_8',
+      choices: []
+    },
+    s_8: {
+      background: 'school.jpg',
+      actorImg: 'Alex.png',
+      message: 'Ну можно и так сказать. Мы только-только переехали с родителями из Тарту, поэтому белорусский язык для меня пока что почти как иностранный… Я его только вот сейчас на этих уроках впервые услышал.',
+      nextSlide: 's_9',
+      choices: []
+    },
+    s_9: {
+      background: 'school.jpg',
+      actorImg: 'MC.png',
+      message: 'Ну да, тут у нас его редко услышишь, разве что Алеся нашего послушать!',
+      nextSlide: 's_10',
+      choices: []
+    },
+    s_10: {
+      background: 'school.jpg',
+      actorImg: 'Alex.png',
+      message: 'Вот мне всегда интересно было, почему белорусы не говорят по-белорусски?',
+      nextSlide: 's_11',
+      choices: []
+    },
+    s_11: {
+      background: 'school.jpg',
+      actorImg: 'MC.png',
+      message: 'Не знаю, так исторически сложилось, наверное…',
+      nextSlide: 's_12',
+      choices: []
+    },
+    s_12: {
+      background: 'school.jpg',
+      actorImg: 'Alex.png',
+      message: 'У тебя в семье все тоже по-русски разговаривают?',
+      nextSlide: 's_13',
+      choices: []
+    },
+    s_13: {
+      background: 'school.jpg',
+      actorImg: 'MC.png',
+      message: 'Ага, ну почти, бабуля на трасянке шпарит. Но так она из деревни!',
+      nextSlide: 's_14',
+      choices: []
+    },
+    s_14: {
+      background: 'school.jpg',
+      actorImg: 'Alex.png',
+      message: 'А что такое "трасянка"?',
+      nextSlide: 's_15',
+      choices: []
+    },
+    s_15: {
+      background: 'school.jpg',
+      actorImg: 'MC.png',
+      message: 'О, да ты совсем не в теме. Короче, смотри, трасянка - это такая острая смесь с русского и белорусского. Ну, например, "я пайшоў аддыхаць". Ахах.',
+      nextSlide: 's_16',
+      choices: []
+    },
+    s_16: {
+      background: 'school.jpg',
+      actorImg: 'Alex.png',
+      message: 'Интересно как! Ну будешь меня просвещать теперь в вопросе таких особенностей?',
+      nextSlide: 's_17',
+      choices: []
+    },
+    s_17: {
+      background: 'school.jpg',
+      actorImg: 'MC.png',
+      message: 'Да без проблем. Обращайся!',
+      nextSlide: 's_18',
+      choices: []
+    },
+    s_18: {
+      background: 'school.jpg',
+      actorImg: 'MC.png',
+      message: 'Ну всё, наконец-то уроки закончились… Пятница, красота! Куда б пойти?',
+      nextSlide: 's_19',
       choices: [
         {
           id: 'a',
-          text: 'choice a',
-          effects: [
-            { kind: EffectKind.CounterInc, counterName: 'a', counterIncValue: 1 },
-            { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 10 }],
-          
+          text: 'В кино',
+          effects: [],
         },
         {
-          id: 'b',
-          text: 'choice b',
-          effects: [
-            { kind: EffectKind.CounterInc, counterName: 'b', counterIncValue: 1 },
-            { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 20 }
-          ]
+          id: 'a',
+          text: 'В кафе',
+          effects: [],
         },
         {
           id: 'c',
-          text: 'choice c',
-          effects: [
-            { kind: EffectKind.CounterInc, counterName: 'e', counterIncValue: 1 },
-            { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 50 }
-          ]
+          text: 'В парк',
+          effects: []
         }
-      ],
+      ]
+    },
+    s_19: {
+      background: 'store.jpg',
+      actorImg: 'MC.png',
+      message: 'Хмм, что бы выбрать... О, сейчас глянем, что народ берет!',
+      nextSlide: 's_20',
+      choices: []
+    },
+    s_20: {
+      background: 'store.jpg',
+      actorImg: 'MC.png',
+      message: 'Слушай, вкусное мороженое вот это, которое ты сейчас взяла?',
+      nextSlide: 's_21',
+      choices: []
+    },
+    s_21: {
+      background: 'store.jpg',
+      actorImg: 'LI.png',
+      message: 'Ага, смачнае :)',
+      nextSlide: 's_22',
+      choices: []
+    },
+    s_22: {
+      background: 'store.jpg',
+      actorImg: 'MC.png',
+      message: 'То есть вкусное?',
+      nextSlide: 's_23',
+      choices: []
+    },
+    s_23: {
+      background: 'store.jpg',
+      actorImg: 'LI.png',
+      message: 'То бок смачнае;)',
+      nextSlide: 's_24',
+      choices: []
+    },
+    s_24: {
+      background: 'store.jpg',
+      actorImg: 'MC.png',
+      message: 'Ты только по-белорусски разговаривать умеешь?',
+      nextSlide: 's_25',
+      choices: []
+    },
+    s_25: {
+      background: 'store.jpg',
+      actorImg: 'LI.png',
+      message: 'Можа быць, пакуль не праверыш, не даведаешся.',
+      nextSlide: 's_26',
+      choices: []
+    },
+    s_26: {
+      background: 'store.jpg',
+      actorImg: 'MC.png',
+      message: 'Ахах, тогда можа мне праверыць?',
+      nextSlide: 's_27',
+      choices: []
+    },
+    s_27: {
+      background: 'store.jpg',
+      actorImg: 'LI.png',
+      message: 'Можа:)',
+      nextSlide: 's_28',
+      choices: []
+    },
+    
+    oios_19: {
+      background: '',
+      actorImg: 'MC.png',
+      message: 'Так, осталось только в магазин за мороженным-  и в путь!',
+      nextSlide: 's_19',
+      choices: [],
       initialize: (scenario) => {
-        if(scenario.chosen['first_a']){
+        if(scenario.chosen['s_18_a']){
           scenario.items.third.background = 'home.jpg';
         }
       }
