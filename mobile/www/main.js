@@ -182,7 +182,6 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 // import { Scenario } from './scenario';
 var GameComponent = /** @class */ (function () {
     function GameComponent() {
-        this.chosen = {};
         this.sc = _scenario__WEBPACK_IMPORTED_MODULE_1__["SCENARIO"];
         this.currentSlide = this.sc.items[this.sc.entry];
         this.gameInitialized = false;
@@ -224,14 +223,21 @@ var GameComponent = /** @class */ (function () {
         var nextSlide = this.currentSlide.nextSlide;
         if (choice.nextSlide != null)
             nextSlide = choice.nextSlide;
-        this.chosen[this.currentSlide.id + '_' + choice.id] = true;
+        this.sc.chosen[this.currentSlide.id + '_' + choice.id] = true;
         if (choice.effects != null) {
             choice.effects.forEach(function (effect) {
                 _this.sc.counters[effect.counterName].values.push(effect.counterIncValue);
             });
         }
-        this.currentSlide = this.sc.items[nextSlide];
+        this.activateSlide(nextSlide);
         event.stopPropagation();
+    };
+    GameComponent.prototype.activateSlide = function (slideId) {
+        var next = this.sc.items[slideId];
+        if (next.initialize != null) {
+            next.initialize(this.sc);
+        }
+        this.currentSlide = this.sc.items[slideId];
     };
     Object.defineProperty(GameComponent.prototype, "actorName", {
         get: function () {
@@ -313,6 +319,7 @@ var SCENARIO = {
         'd': { type: 'sum', values: [] },
         'e': { type: 'sum', values: [] }
     },
+    chosen: {},
     entry: 'first',
     items: {
         first: {
@@ -323,7 +330,7 @@ var SCENARIO = {
             nextSlide: 'second',
             choices: [
                 {
-                    id: 'slide_a_choice_a',
+                    id: 'a',
                     text: 'Сдаюсь, пусть играют, я опускаю руки',
                     effects: [
                         { kind: EffectKind.CounterInc, counterName: 'a', counterIncValue: 1 },
@@ -383,7 +390,12 @@ var SCENARIO = {
                         { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 50 }
                     ]
                 }
-            ]
+            ],
+            initialize: function (scenario) {
+                if (scenario.chosen['first_a']) {
+                    scenario.items.third.background = 'home.jpg';
+                }
+            }
         },
         fourth: {
             background: 'accelerator.jpg',

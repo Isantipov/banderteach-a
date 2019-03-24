@@ -3,6 +3,7 @@ export class Choice {
   text: string;
   effects?: Effect[] = [];
   nextSlide?: string;
+  isAvailable: boolean;
 }
 
 export class Effect {
@@ -23,6 +24,7 @@ export class Slide {
   message: string;
   choices: Choice[];
   nextSlide?: string;
+  initialize: (any) => void; 
 }
 
 
@@ -43,6 +45,7 @@ export const SCENARIO: any = {
     'd': { type: 'sum', values: [] },
     'e': { type: 'sum', values: [] }
   },
+  chosen: {},
 
   entry: 'first',
   items: {
@@ -54,7 +57,7 @@ export const SCENARIO: any = {
       nextSlide: 'second',
       choices: [
         {
-          id: 'slide_a_choice_a',
+          id: 'a',
           text: 'Сдаюсь, пусть играют, я опускаю руки',
           effects: [
             { kind: EffectKind.CounterInc, counterName: 'a', counterIncValue: 1 },
@@ -113,7 +116,12 @@ export const SCENARIO: any = {
             { kind: EffectKind.CounterInc, counterName: 'global', counterIncValue: 50 }
           ]
         }
-      ]
+      ],
+      initialize: (scenario) => {
+        if(scenario.chosen['first_a']){
+          scenario.items.third.background = 'home.jpg';
+        }
+      }
     },
     fourth: {
       background: 'accelerator.jpg',

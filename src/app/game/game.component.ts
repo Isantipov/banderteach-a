@@ -8,7 +8,6 @@ import { Slide, Choice, Effect, EffectKind, SCENARIO } from './scenario';
   styleUrls: ['./game.component.css']
 })
 export class GameComponent implements OnInit {
-  chosen: any = {};
 
   ngOnInit() {
   }
@@ -24,14 +23,23 @@ export class GameComponent implements OnInit {
     if (choice.nextSlide != null)
       nextSlide = choice.nextSlide;
 
-    this.chosen[this.currentSlide.id + '_' + choice.id] = true;
+    this.sc.chosen[this.currentSlide.id + '_' + choice.id] = true;
     if (choice.effects != null) {
       choice.effects.forEach(effect => {
         this.sc.counters[effect.counterName].values.push(effect.counterIncValue);
       });
     }
-    this.currentSlide = this.sc.items[nextSlide];
+    this.activateSlide(nextSlide);
     event.stopPropagation();
+  }
+  activateSlide(slideId: string): void{
+    var next = this.sc.items[slideId];
+    if(next.initialize != null){
+      next.initialize(this.sc);
+    }
+
+    this.currentSlide = this.sc.items[slideId];
+
   }
 
   playerName: string;
