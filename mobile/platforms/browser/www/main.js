@@ -144,7 +144,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".location {height: 100%;}\r\n.scene {\r\n    position: absolute;\r\n    top: 100px; \r\n    margin: 0 0 2em 0;\r\n    padding: 0;\r\n    width: 75%vw;\r\n}\r\n.message  {\r\n    position: relative;\r\n    left: 0;\r\n    background-color: #00BFFF;\r\n    margin: .5em;\r\n    padding: .5em .5em;\r\n    border-radius: 4px;\r\n    color: white;\r\n}\r\n.actor{\r\n    height: 30vh;\r\n}\r\n.choices{\r\n    list-style-type: none;\r\n    }\r\n.choices li {\r\n        cursor: pointer;\r\n        position: relative;\r\n        left: 0;\r\n        background-color: #EEE;\r\n        margin: .5em;\r\n        padding: .3em 0;\r\n        /* height: 1.6em; */\r\n        border-radius: 4px;\r\n    }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ2FtZS9nYW1lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsV0FBVyxhQUFhLENBQUM7QUFDekI7SUFDSSxtQkFBbUI7SUFDbkIsV0FBVztJQUNYLGtCQUFrQjtJQUNsQixXQUFXO0lBQ1gsYUFBYTtDQUNoQjtBQUNEO0lBQ0ksbUJBQW1CO0lBQ25CLFFBQVE7SUFDUiwwQkFBMEI7SUFDMUIsYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixtQkFBbUI7SUFDbkIsYUFBYTtDQUNoQjtBQUdEO0lBQ0ksYUFBYTtDQUNoQjtBQUNEO0lBQ0ksc0JBQXNCO0tBQ3JCO0FBQ0Q7UUFDSSxnQkFBZ0I7UUFDaEIsbUJBQW1CO1FBQ25CLFFBQVE7UUFDUix1QkFBdUI7UUFDdkIsYUFBYTtRQUNiLGdCQUFnQjtRQUNoQixvQkFBb0I7UUFDcEIsbUJBQW1CO0tBQ3RCIiwiZmlsZSI6InNyYy9hcHAvZ2FtZS9nYW1lLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubG9jYXRpb24ge2hlaWdodDogMTAwJTt9XHJcbi5zY2VuZSB7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IDEwMHB4OyBcclxuICAgIG1hcmdpbjogMCAwIDJlbSAwO1xyXG4gICAgcGFkZGluZzogMDtcclxuICAgIHdpZHRoOiA3NSV2dztcclxufVxyXG4ubWVzc2FnZSAge1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgbGVmdDogMDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMwMEJGRkY7XHJcbiAgICBtYXJnaW46IC41ZW07XHJcbiAgICBwYWRkaW5nOiAuNWVtIC41ZW07XHJcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbn1cclxuXHJcblxyXG4uYWN0b3J7XHJcbiAgICBoZWlnaHQ6IDMwdmg7XHJcbn1cclxuLmNob2ljZXN7XHJcbiAgICBsaXN0LXN0eWxlLXR5cGU6IG5vbmU7XHJcbiAgICB9XHJcbiAgICAuY2hvaWNlcyBsaSB7XHJcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgICAgICBsZWZ0OiAwO1xyXG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNFRUU7XHJcbiAgICAgICAgbWFyZ2luOiAuNWVtO1xyXG4gICAgICAgIHBhZGRpbmc6IC4zZW0gMDtcclxuICAgICAgICAvKiBoZWlnaHQ6IDEuNmVtOyAqL1xyXG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcclxuICAgIH0iXX0= */"
+module.exports = ".location {height: 100%;}\r\n.scene {\r\n    position: absolute;\r\n    top: 100px; \r\n    margin: 0 0 2em 0;\r\n    padding: 0;\r\n    width: 75%vw;\r\n}\r\n.message  {\r\n    position: relative;\r\n    left: 0;\r\n    background-color: #00BFFF;\r\n    margin: .5em;\r\n    padding: .5em .5em;\r\n    border-radius: 4px;\r\n    color: white;\r\n}\r\n.hidden {\r\n    display: none;\r\n}\r\n.actor{\r\n    height: 30vh;\r\n}\r\n.actorName{\r\n    position: relative;\r\n    left: 0;\r\n    background-color: #00BFFF;\r\n    margin: .5em;\r\n    padding: .5em .5em;\r\n    border-radius: 4px;\r\n    color: #2A52BE;\r\n}\r\n.choices{\r\n    list-style-type: none;\r\n    }\r\n.choices li {\r\n        cursor: pointer;\r\n        position: relative;\r\n        left: 0;\r\n        background-color: #EEE;\r\n        margin: .5em;\r\n        padding: .3em 0;\r\n        /* height: 1.6em; */\r\n        border-radius: 4px;\r\n    }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ2FtZS9nYW1lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsV0FBVyxhQUFhLENBQUM7QUFDekI7SUFDSSxtQkFBbUI7SUFDbkIsV0FBVztJQUNYLGtCQUFrQjtJQUNsQixXQUFXO0lBQ1gsYUFBYTtDQUNoQjtBQUNEO0lBQ0ksbUJBQW1CO0lBQ25CLFFBQVE7SUFDUiwwQkFBMEI7SUFDMUIsYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixtQkFBbUI7SUFDbkIsYUFBYTtDQUNoQjtBQUNEO0lBQ0ksY0FBYztDQUNqQjtBQUVEO0lBQ0ksYUFBYTtDQUNoQjtBQUNEO0lBQ0ksbUJBQW1CO0lBQ25CLFFBQVE7SUFDUiwwQkFBMEI7SUFDMUIsYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixtQkFBbUI7SUFDbkIsZUFBZTtDQUNsQjtBQUNEO0lBQ0ksc0JBQXNCO0tBQ3JCO0FBQ0Q7UUFDSSxnQkFBZ0I7UUFDaEIsbUJBQW1CO1FBQ25CLFFBQVE7UUFDUix1QkFBdUI7UUFDdkIsYUFBYTtRQUNiLGdCQUFnQjtRQUNoQixvQkFBb0I7UUFDcEIsbUJBQW1CO0tBQ3RCIiwiZmlsZSI6InNyYy9hcHAvZ2FtZS9nYW1lLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubG9jYXRpb24ge2hlaWdodDogMTAwJTt9XHJcbi5zY2VuZSB7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IDEwMHB4OyBcclxuICAgIG1hcmdpbjogMCAwIDJlbSAwO1xyXG4gICAgcGFkZGluZzogMDtcclxuICAgIHdpZHRoOiA3NSV2dztcclxufVxyXG4ubWVzc2FnZSAge1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgbGVmdDogMDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMwMEJGRkY7XHJcbiAgICBtYXJnaW46IC41ZW07XHJcbiAgICBwYWRkaW5nOiAuNWVtIC41ZW07XHJcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbn1cclxuLmhpZGRlbiB7XHJcbiAgICBkaXNwbGF5OiBub25lO1xyXG59XHJcblxyXG4uYWN0b3J7XHJcbiAgICBoZWlnaHQ6IDMwdmg7XHJcbn1cclxuLmFjdG9yTmFtZXtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIGxlZnQ6IDA7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDBCRkZGO1xyXG4gICAgbWFyZ2luOiAuNWVtO1xyXG4gICAgcGFkZGluZzogLjVlbSAuNWVtO1xyXG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xyXG4gICAgY29sb3I6ICMyQTUyQkU7XHJcbn1cclxuLmNob2ljZXN7XHJcbiAgICBsaXN0LXN0eWxlLXR5cGU6IG5vbmU7XHJcbiAgICB9XHJcbiAgICAuY2hvaWNlcyBsaSB7XHJcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgICAgICBsZWZ0OiAwO1xyXG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNFRUU7XHJcbiAgICAgICAgbWFyZ2luOiAuNWVtO1xyXG4gICAgICAgIHBhZGRpbmc6IC4zZW0gMDtcclxuICAgICAgICAvKiBoZWlnaHQ6IDEuNmVtOyAqL1xyXG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcclxuICAgIH0iXX0= */"
 
 /***/ }),
 
@@ -155,7 +155,7 @@ module.exports = ".location {height: 100%;}\r\n.scene {\r\n    position: absolut
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<img class=\"location\" src=\"./assets/{{currentSlide.background}}\"/>\n<div class=\"scene\" style=\"\">\n  <img class=\"actor\" src=\"./assets/{{currentSlide.actorImg}}\"/>\n  <div class=\"message\">\n    {{currentSlide.message}}\n  </div>\n  <ul class=\"choices\">\n    <li *ngFor=\"let choice of currentSlide.choices\"\n      (click)=\"onSelect(choice)\"\n      >\n      {{choice.text}}\n    </li>\n  </ul>\n</div>"
+module.exports = "<div [class.hidden]=\"gameInitialized\">\n\n\n\n  <label>Имя:\n    <input [(ngModel)]=\"playerName\" placeholder=\"твоё имя\" />\n  </label>\n  <button (click)=\"initialize()\">Начать</button>\n</div>\n\n<div (click)=\"onClick()\" [class.hidden]=\"!gameInitialized\">\n  <img class=\"location\" src=\"./assets/{{currentSlide.background}}\" />\n  <div class=\"scene\" style=\"\">\n    <img class=\"actor\" src=\"./assets/{{currentSlide.actorImg}}\" />\n    <div class=\"actorName\">\n      {{actorName}}:\n    </div>\n    <div class=\"message\">\n      {{currentSlide.message}}\n    </div>\n    <ul class=\"choices\">\n      <li *ngFor=\"let choice of currentSlide.choices\" (click)=\"onSelect(choice, $event)\">\n        {{choice.text}}\n      </li>\n    </ul>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -185,36 +185,36 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 // import { Scenario } from './scenario';
 var GameComponent = /** @class */ (function () {
     function GameComponent() {
-        this.currentSlide = {
-            id: 'first',
-            background: 'coworking.jpg',
-            actorImg: 'Ales.png',
-            message: 'Так игрушки, говоришь? Так может пусть лучше играют?',
-            choices: [
-                {
-                    id: 'slide_a_choice_a',
-                    text: 'Сдаюсь, пусть играют, я опускаю руки',
-                    effects: [{ kind: _scenario__WEBPACK_IMPORTED_MODULE_1__["EffectKind"].CounterInc, counterName: 'a', counterIncValue: 1 }]
-                },
-                {
-                    id: 'slide_a_choice_b',
-                    text: 'Нет, игры отдельно, уроки отдельно!',
-                    effects: [
-                        { kind: _scenario__WEBPACK_IMPORTED_MODULE_1__["EffectKind"].CounterInc, counterName: 'b', counterIncValue: 2 },
-                        { kind: _scenario__WEBPACK_IMPORTED_MODULE_1__["EffectKind"].NextSlide, nextSlide: 'slide_beta' },
-                    ]
-                },
-                {
-                    id: 'slide_a_choice_c',
-                    text: 'Хм, может действительно призвать игры в союзники…'
-                }
-            ]
-        };
+        this.sc = _scenario__WEBPACK_IMPORTED_MODULE_1__["SCENARIO"];
+        this.currentSlide = this.sc.items[this.sc.entry];
+        this.gameInitialized = false;
     }
     GameComponent.prototype.ngOnInit = function () {
     };
-    GameComponent.prototype.onSelect = function (choice) {
-        alert(JSON.stringify(choice));
+    GameComponent.prototype.onClick = function () {
+        if (this.currentSlide.choices == null || this.currentSlide.choices == [])
+            this.currentSlide = this.sc.items[this.currentSlide.nextSlide];
+    };
+    GameComponent.prototype.onSelect = function (choice, event) {
+        // alert(JSON.stringify(choice));
+        var nextSlide = this.currentSlide.nextSlide;
+        if (choice.nextSlide != null)
+            nextSlide = choice.nextSlide;
+        this.currentSlide = this.sc.items[nextSlide];
+        event.stopPropagation();
+    };
+    Object.defineProperty(GameComponent.prototype, "actorName", {
+        get: function () {
+            var actor = this.currentSlide.actorImg;
+            if (actor == 'MC.png')
+                return this.playerName;
+            return this.sc.actorNames[actor];
+        },
+        enumerable: true,
+        configurable: true
+    });
+    GameComponent.prototype.initialize = function () {
+        this.gameInitialized = true;
     };
     GameComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -235,7 +235,7 @@ var GameComponent = /** @class */ (function () {
 /*!**********************************!*\
   !*** ./src/app/game/scenario.ts ***!
   \**********************************/
-/*! exports provided: Choice, Effect, EffectKind, Slide, Scenario */
+/*! exports provided: Choice, Effect, EffectKind, Slide, SCENARIO */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -244,7 +244,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Effect", function() { return Effect; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EffectKind", function() { return EffectKind; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Slide", function() { return Slide; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Scenario", function() { return Scenario; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SCENARIO", function() { return SCENARIO; });
 var Choice = /** @class */ (function () {
     function Choice() {
         this.effects = [];
@@ -269,10 +269,16 @@ var Slide = /** @class */ (function () {
     return Slide;
 }());
 
-var Scenario = {
+var SCENARIO = {
     name: "Мова",
-    items: [
-        {
+    actorNames: {
+        'Ales.png': 'Алесь',
+        'Alex.png': 'Алекс',
+        'mom.png': 'Мама'
+    },
+    entry: 'first',
+    items: {
+        first: {
             id: 'first',
             background: 'coworking.jpg',
             actorImg: 'Ales.png',
@@ -282,14 +288,14 @@ var Scenario = {
                 {
                     id: 'slide_a_choice_a',
                     text: 'Сдаюсь, пусть играют, я опускаю руки',
-                    effects: [{ kind: EffectKind.CounterInc, counterName: 'a', counterIncValue: 1 }]
+                    effects: [{ kind: EffectKind.CounterInc, counterName: 'a', counterIncValue: 1 }],
+                    nextSlide: 'third'
                 },
                 {
                     id: 'slide_a_choice_b',
                     text: 'Нет, игры отдельно, уроки отдельно!',
                     effects: [
-                        { kind: EffectKind.CounterInc, counterName: 'b', counterIncValue: 2 },
-                        { kind: EffectKind.NextSlide, nextSlide: 'slide_beta' },
+                        { kind: EffectKind.CounterInc, counterName: 'b', counterIncValue: 2 }
                     ]
                 },
                 {
@@ -298,13 +304,39 @@ var Scenario = {
                 }
             ]
         },
-        {
+        second: {
             id: 'second',
             background: 'accelerator.jpg',
             actorImg: 'Alex.png',
-            message: 'Так игрушки, говоришь? Так может пусть лучше играют?',
+            message: 'Second',
+            nextSlide: 'third',
+        },
+        third: {
+            id: 'third',
+            background: 'accelerator.jpg',
+            actorImg: 'mom.png',
+            message: 'Slide three',
+            nextSlide: 'fourth',
+        },
+        fourth: {
+            background: 'accelerator.jpg',
+            actorImg: 'Ales.png',
+            message: 'Slide 4',
+            nextSlide: 'fifth',
+        },
+        fifth: {
+            background: 'home.jpg',
+            actorImg: 'Daria.png',
+            message: 'Daria speaking slide 5',
+            nextSlide: 'sixth',
+        },
+        sixth: {
+            background: 'cafe.jpg',
+            actorImg: 'MC.png',
+            message: 'FINITA',
+            nextSlide: null
         }
-    ]
+    }
 };
 
 

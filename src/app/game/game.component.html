@@ -1,9 +1,19 @@
-<div (click)="onClick()">
+<div [class.hidden]="gameInitialized">
+
+
+
+  <label>Имя:
+    <input [(ngModel)]="playerName" placeholder="твоё имя" />
+  </label>
+  <button (click)="initialize()">Начать</button>
+</div>
+
+<div (click)="onClick()" [class.hidden]="!gameInitialized">
   <img class="location" src="./assets/{{currentSlide.background}}" />
   <div class="scene" style="">
     <img class="actor" src="./assets/{{currentSlide.actorImg}}" />
     <div class="actorName">
-      {{actorName}}
+      {{actorName}}:
     </div>
     <div class="message">
       {{currentSlide.message}}
