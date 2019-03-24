@@ -68,6 +68,26 @@ export const SCENARIO: any = {
       background: 'accelerator.jpg',
       actorImg: 'mom.png',
       message: 'Slide three',
+      nextSlide: 'fourth',
+    },
+    fourth: {
+      background: 'accelerator.jpg',
+      actorImg: 'Ales.png',
+      message: 'Slide 4',
+      nextSlide: 'fifth',
+    },
+    fifth: {
+      background: 'home.jpg',
+      actorImg: 'Daria.png',
+      message: 'Daria speaking slide 5',
+      nextSlide: 'sixth',
+    },
+    sixth: {
+      background: 'cafe.jpg',
+      actorImg: 'MC.png',
+      message: 'FINITA',
+      nextSlide: null
     }
+
   }
 };

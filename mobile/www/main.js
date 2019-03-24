@@ -155,7 +155,7 @@ module.exports = ".location {height: 100%;}\r\n.scene {\r\n    position: absolut
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<img class=\"location\" src=\"./assets/{{currentSlide.background}}\"/>\n<div class=\"scene\" style=\"\">\n  <img class=\"actor\" src=\"./assets/{{currentSlide.actorImg}}\"/>\n  <div class=\"message\">\n    {{currentSlide.message}}\n  </div>\n  <ul class=\"choices\">\n    <li *ngFor=\"let choice of currentSlide.choices\"\n      (click)=\"onSelect(choice)\"\n      >\n      {{choice.text}}\n    </li>\n  </ul>\n</div>"
+module.exports = "<div (click)=\"onClick()\">\n  <img class=\"location\" src=\"./assets/{{currentSlide.background}}\" />\n  <div class=\"scene\" style=\"\">\n    <img class=\"actor\" src=\"./assets/{{currentSlide.actorImg}}\" />\n    <div class=\"message\">\n      {{currentSlide.message}}\n    </div>\n    <ul class=\"choices\">\n      <li *ngFor=\"let choice of currentSlide.choices\" (click)=\"onSelect(choice, $event)\">\n        {{choice.text}}\n      </li>\n    </ul>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -190,12 +190,17 @@ var GameComponent = /** @class */ (function () {
     }
     GameComponent.prototype.ngOnInit = function () {
     };
-    GameComponent.prototype.onSelect = function (choice) {
-        alert(JSON.stringify(choice));
+    GameComponent.prototype.onClick = function () {
+        if (this.currentSlide.choices == null || this.currentSlide.choices == [])
+            this.currentSlide = this.sc.items[this.currentSlide.nextSlide];
+    };
+    GameComponent.prototype.onSelect = function (choice, event) {
+        // alert(JSON.stringify(choice));
         var nextSlide = this.currentSlide.nextSlide;
         if (choice.nextSlide != null)
             nextSlide = choice.nextSlide;
         this.currentSlide = this.sc.items[nextSlide];
+        event.stopPropagation();
     };
     GameComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -292,6 +297,25 @@ var SCENARIO = {
             background: 'accelerator.jpg',
             actorImg: 'mom.png',
             message: 'Slide three',
+            nextSlide: 'fourth',
+        },
+        fourth: {
+            background: 'accelerator.jpg',
+            actorImg: 'Ales.png',
+            message: 'Slide 4',
+            nextSlide: 'fifth',
+        },
+        fifth: {
+            background: 'home.jpg',
+            actorImg: 'Daria.png',
+            message: 'Daria speaking slide 5',
+            nextSlide: 'sixth',
+        },
+        sixth: {
+            background: 'cafe.jpg',
+            actorImg: 'MC.png',
+            message: 'FINITA',
+            nextSlide: null
         }
     }
 };
