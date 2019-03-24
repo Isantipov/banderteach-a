@@ -185,36 +185,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 // import { Scenario } from './scenario';
 var GameComponent = /** @class */ (function () {
     function GameComponent() {
-        this.currentSlide = {
-            id: 'first',
-            background: 'coworking.jpg',
-            actorImg: 'Ales.png',
-            message: 'Так игрушки, говоришь? Так может пусть лучше играют?',
-            choices: [
-                {
-                    id: 'slide_a_choice_a',
-                    text: 'Сдаюсь, пусть играют, я опускаю руки',
-                    effects: [{ kind: _scenario__WEBPACK_IMPORTED_MODULE_1__["EffectKind"].CounterInc, counterName: 'a', counterIncValue: 1 }]
-                },
-                {
-                    id: 'slide_a_choice_b',
-                    text: 'Нет, игры отдельно, уроки отдельно!',
-                    effects: [
-                        { kind: _scenario__WEBPACK_IMPORTED_MODULE_1__["EffectKind"].CounterInc, counterName: 'b', counterIncValue: 2 },
-                        { kind: _scenario__WEBPACK_IMPORTED_MODULE_1__["EffectKind"].NextSlide, nextSlide: 'slide_beta' },
-                    ]
-                },
-                {
-                    id: 'slide_a_choice_c',
-                    text: 'Хм, может действительно призвать игры в союзники…'
-                }
-            ]
-        };
+        this.sc = _scenario__WEBPACK_IMPORTED_MODULE_1__["SCENARIO"];
+        this.currentSlide = this.sc.items[this.sc.entry];
     }
     GameComponent.prototype.ngOnInit = function () {
     };
     GameComponent.prototype.onSelect = function (choice) {
         alert(JSON.stringify(choice));
+        var nextSlide = this.currentSlide.nextSlide;
+        if (choice.nextSlide != null)
+            nextSlide = choice.nextSlide;
+        this.currentSlide = this.sc.items[nextSlide];
     };
     GameComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -235,7 +216,7 @@ var GameComponent = /** @class */ (function () {
 /*!**********************************!*\
   !*** ./src/app/game/scenario.ts ***!
   \**********************************/
-/*! exports provided: Choice, Effect, EffectKind, Slide, Scenario */
+/*! exports provided: Choice, Effect, EffectKind, Slide, SCENARIO */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -244,7 +225,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Effect", function() { return Effect; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EffectKind", function() { return EffectKind; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Slide", function() { return Slide; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Scenario", function() { return Scenario; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SCENARIO", function() { return SCENARIO; });
 var Choice = /** @class */ (function () {
     function Choice() {
         this.effects = [];
@@ -269,10 +250,11 @@ var Slide = /** @class */ (function () {
     return Slide;
 }());
 
-var Scenario = {
+var SCENARIO = {
     name: "Мова",
-    items: [
-        {
+    entry: 'first',
+    items: {
+        first: {
             id: 'first',
             background: 'coworking.jpg',
             actorImg: 'Ales.png',
@@ -282,14 +264,14 @@ var Scenario = {
                 {
                     id: 'slide_a_choice_a',
                     text: 'Сдаюсь, пусть играют, я опускаю руки',
-                    effects: [{ kind: EffectKind.CounterInc, counterName: 'a', counterIncValue: 1 }]
+                    effects: [{ kind: EffectKind.CounterInc, counterName: 'a', counterIncValue: 1 }],
+                    nextSlide: 'third'
                 },
                 {
                     id: 'slide_a_choice_b',
                     text: 'Нет, игры отдельно, уроки отдельно!',
                     effects: [
-                        { kind: EffectKind.CounterInc, counterName: 'b', counterIncValue: 2 },
-                        { kind: EffectKind.NextSlide, nextSlide: 'slide_beta' },
+                        { kind: EffectKind.CounterInc, counterName: 'b', counterIncValue: 2 }
                     ]
                 },
                 {
@@ -298,13 +280,20 @@ var Scenario = {
                 }
             ]
         },
-        {
+        second: {
             id: 'second',
             background: 'accelerator.jpg',
             actorImg: 'Alex.png',
-            message: 'Так игрушки, говоришь? Так может пусть лучше играют?',
+            message: 'Second',
+            nextSlide: 'third',
+        },
+        third: {
+            id: 'third',
+            background: 'accelerator.jpg',
+            actorImg: 'mom.png',
+            message: 'Slide three',
         }
-    ]
+    }
 };
 
 
