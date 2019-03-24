@@ -17,6 +17,11 @@ export class GameComponent implements OnInit {
 
   onSelect(choice: Choice): void {
     alert(JSON.stringify(choice));
+    var nextSlide = this.currentSlide.nextSlide;
+    if(choice.nextSlide != null)
+      nextSlide = choice.nextSlide;
+
+    this.currentSlide = this.sc.items[nextSlide];
   }
   playerName: string;
   sc = SCENARIO;

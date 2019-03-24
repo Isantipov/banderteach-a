@@ -2,6 +2,7 @@ export class Choice {
   id: string;
   text: string;
   effects?: Effect[] = [];
+  nextSlide?: string;
 }
 
 export class Effect {
@@ -39,14 +40,14 @@ export const SCENARIO: any = {
         {
           id: 'slide_a_choice_a',
           text: 'Сдаюсь, пусть играют, я опускаю руки',
-          effects: [{ kind: EffectKind.CounterInc, counterName: 'a', counterIncValue: 1 }]
+          effects: [{ kind: EffectKind.CounterInc, counterName: 'a', counterIncValue: 1 }],
+          nextSlide: 'third'
         },
         {
           id: 'slide_a_choice_b',
           text: 'Нет, игры отдельно, уроки отдельно!',
           effects: [
-            { kind: EffectKind.CounterInc, counterName: 'b', counterIncValue: 2 },
-            { kind: EffectKind.NextSlide, nextSlide: 'slide_beta' },
+            { kind: EffectKind.CounterInc, counterName: 'b', counterIncValue: 2 }
           ]
         },
         {
@@ -59,7 +60,14 @@ export const SCENARIO: any = {
       id: 'second',
       background: 'accelerator.jpg',
       actorImg: 'Alex.png',
-      message: 'Так игрушки, говоришь? Так может пусть лучше играют?',
+      message: 'Second',
+      nextSlide: 'third',
+    },
+    third: {
+      id: 'third',
+      background: 'accelerator.jpg',
+      actorImg: 'mom.png',
+      message: 'Slide three',
     }
   }
 };
