@@ -6,10 +6,9 @@
     {{message}}
   </div>
   <ul class="choices">
-    <li *ngFor="let choice of choices">
-      <!-- [class.selected]="hero === selectedHero" -->
-      <!-- (click)="onSelect(hero)" -->
-      <!-- > -->
+    <li *ngFor="let choice of choices"
+      (click)="onSelect(choice)"
+      >
       {{choice.text}}
     </li>
   </ul>
