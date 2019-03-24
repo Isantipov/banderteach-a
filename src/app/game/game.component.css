@@ -20,6 +20,15 @@
 .actor{
     height: 30vh;
 }
+.actorName{
+    position: relative;
+    left: 0;
+    background-color: #00BFFF;
+    margin: .5em;
+    padding: .5em .5em;
+    border-radius: 4px;
+    color: #2A52BE;
+}
 .choices{
     list-style-type: none;
     }

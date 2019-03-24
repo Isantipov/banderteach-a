@@ -30,7 +30,13 @@ export class GameComponent implements OnInit {
   }
   playerName: string;
   sc = SCENARIO;
-  currentSlide: Slide = this.sc.items[this.sc.entry]; 
+  currentSlide: Slide = this.sc.items[this.sc.entry];
+  get actorName(): string {
+    var actor = this.currentSlide.actorImg;
+    if(actor == 'MC.png')
+      return 'Ты';
+    return this.sc.actorNames[actor];
+}
   
 //   {
 //   id: 'first',

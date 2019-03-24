@@ -28,6 +28,13 @@ export class Slide {
 
 export const SCENARIO: any = {
   name: "Мова",
+  actorNames:
+  {
+    'Ales.png': 'Алесь',
+    'Alex.png': 'Алекс',
+    'mom.png': 'Мама'
+  },
+
   entry: 'first',
   items: {
     first: {
