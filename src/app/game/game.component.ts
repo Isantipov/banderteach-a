@@ -14,7 +14,7 @@ export class GameComponent implements OnInit {
 
   onClick(): void {
     if (this.currentSlide.choices == null || this.currentSlide.choices.length == 0)
-      this.currentSlide = this.sc.items[this.currentSlide.nextSlide];
+      this.activateSlide(this.currentSlide.nextSlide);
   }
 
   onSelect(choice: Choice, event: Event): void {
@@ -57,6 +57,7 @@ export class GameComponent implements OnInit {
 
   initialize(): void {
     this.gameInitialized = true;
+    this.sc.playerName = this.playerName;
   }
 
   //   {

@@ -253,7 +253,16 @@ export const SCENARIO: any = {
       nextSlide: 's_28',
       choices: []
     },
-    
+    s_28: {
+      background: 'store.jpg',
+      actorImg: 'MC.png',
+      message: 'Ахах, тогда можа мне праверыць?',
+      nextSlide: 's_27',
+      choices: [],
+      initialize: (scenario) => {
+          scenario.items.s_28.message = 'Я ' + scenario.playerName + '. Ты спешишь?';
+      }
+    },
     oios_19: {
       background: '',
       actorImg: 'MC.png',
