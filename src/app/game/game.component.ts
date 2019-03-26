@@ -47,10 +47,15 @@ export class GameComponent implements OnInit {
   currentSlide: Slide = this.sc.items[this.sc.entry];
 
   get actorName(): string {
-    var actor = this.currentSlide.actorImg;
-    if (actor == 'MC.png')
+    if (this.isPlayerActor)
       return this.playerName;
-    return this.sc.actorNames[actor];
+    return this.sc.actorNames[this.currentSlide.actorImg];
+  }
+
+
+  get isPlayerActor(): boolean {
+    var actor = this.currentSlide.actorImg;
+    return actor == 'MC.png';
   }
 
   gameInitialized: boolean = false;

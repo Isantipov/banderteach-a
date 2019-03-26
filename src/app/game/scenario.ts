@@ -144,7 +144,7 @@ export const SCENARIO: any = {
       actorImg: 'Alex.png',
       message: 'А что такое "трасянка"?',
       nextSlide: 's_15',
-      choices: []
+      choices: [] 
     },
     s_15: {
       background: 'school.jpg',
@@ -171,7 +171,7 @@ export const SCENARIO: any = {
       background: 'school.jpg',
       actorImg: 'MC.png',
       message: 'Ну всё, наконец-то уроки закончились… Пятница, красота! Куда б пойти?',
-      nextSlide: 's_19',
+      nextSlide: 's_18_1',
       choices: [
         {
           id: 'a',
@@ -190,6 +190,13 @@ export const SCENARIO: any = {
         }
       ]
     },
+    s_18_1: {
+      background: 'school.jpg',
+      actorImg: 'MC.png',
+      message: 'Так, осталось только в магазин за мороженным - и в путь!',
+      nextSlide: 's_19',
+      choices: []
+    },    
     s_19: {
       background: 'store.jpg',
       actorImg: 'MC.png',
@@ -424,8 +431,8 @@ export const SCENARIO: any = {
     s_37: {
       background: 'movie.jpg',
       actorImg: 'MC.png',
-      message: 'Это тяжко - разговаривать в нашей стране на беларускай мове… TO BE CONTINUED',
-      nextSlide: 's_37',
+      message: 'Это тяжко - разговаривать в нашей стране на беларускай мове!',
+      nextSlide: 's_38',
       choices: [],
       initialize: (scenario) => {
         var current = scenario.items.s_37; 
@@ -434,44 +441,326 @@ export const SCENARIO: any = {
         }
         if(scenario.chosen['s_30_b']){
           current.background = 'cafe.jpg';
-          // current.message = 'Смачная кава?';
+          
         }
         if(scenario.chosen['s_30_c']){
-          current.background = 'park.jpg';
-          // current.message = 'Якое цудоўнае надвор\'е!';
+          current.background = 'park.jpg';        
         }
       }
-    },
-    oios_19: {
-      background: '',
-      actorImg: 'MC.png',
-      message: 'Так, осталось только в магазин за мороженным-  и в путь!',
-      nextSlide: 's_19',
+    },   
+     s_38: {
+      background: 'movie.jpg',
+      actorImg: 'LI.png',
+      message: 'Часам гэта так, але збольшага ўсе падтрымліваюць. Бацькі прынялі, праўда, сябры некаторыя вырашылі, што гэта занадта, але так нават лепш…',
+      nextSlide: 's_39',
       choices: [],
       initialize: (scenario) => {
-        if(scenario.chosen['s_18_a']){
-          scenario.items.third.background = 'home.jpg';
+        var current = scenario.items.s_38; 
+        if(scenario.chosen['s_30_a']){
+          current.background = 'movie.jpg';
+        }
+        if(scenario.chosen['s_30_b']){
+          current.background = 'cafe.jpg';
+          
+        }
+        if(scenario.chosen['s_30_c']){
+          current.background = 'park.jpg';        
         }
       }
-    },
-    fourth: {
-      background: 'accelerator.jpg',
-      actorImg: 'Ales.png',
-      message: 'Slide 4',
-      nextSlide: 'fifth',
-    },
-    fifth: {
-      background: 'home.jpg',
-      actorImg: 'Daria.png',
-      message: 'Daria speaking slide 5',
-      nextSlide: 'sixth',
-    },
-    sixth: {
-      background: 'cafe.jpg',
+    },    
+    s_39: {
+      background: 'movie.jpg',
       actorImg: 'MC.png',
-      message: 'FINITA',
-      nextSlide: null
-    }
+      message: 'Знаешь, я цябе даже паважаю!',
+      nextSlide: 's_40',
+      choices: [],
+      initialize: (scenario) => {
+        var current = scenario.items.s_39; 
+        if(scenario.chosen['s_30_a']){
+          current.background = 'movie.jpg';
+        }
+        if(scenario.chosen['s_30_b']){
+          current.background = 'cafe.jpg';
+          
+        }
+        if(scenario.chosen['s_30_c']){
+          current.background = 'park.jpg';        
+        }
+      }
+    },    
+    s_40: {
+      background: 'movie.jpg',
+      actorImg: 'LI.png',
+      message: 'Вай, ты рэзка стаў беларускамоўным? Я таксама цябе ДАЖЕ паважаю:)',
+      nextSlide: 's_41',
+      choices: [],
+      initialize: (scenario) => {
+        var current = scenario.items.s_40; 
+        if(scenario.chosen['s_30_a']){
+          current.background = 'movie.jpg';
+        }
+        if(scenario.chosen['s_30_b']){
+          current.background = 'cafe.jpg';
+          
+        }
+        if(scenario.chosen['s_30_c']){
+          current.background = 'park.jpg';        
+        }
+      }
+    },    
+    s_41: {
+      background: 'movie.jpg',
+      actorImg: 'MC.png',
+      message: 'А чым ты вообще интересуешься?',
+      nextSlide: 's_42',
+      choices: [],
+      initialize: (scenario) => {
+        var current = scenario.items.s_41; 
+        if(scenario.chosen['s_30_a']){
+          current.background = 'movie.jpg';
+        }
+        if(scenario.chosen['s_30_b']){
+          current.background = 'cafe.jpg';
+          
+        }
+        if(scenario.chosen['s_30_c']){
+          current.background = 'park.jpg';        
+        }
+      }
+    },    
+    s_42: {
+      background: 'movie.jpg',
+      actorImg: 'LI.png',
+      message: 'Ну, мяне вельмі цікавіць гісторыя. Ведаеш, у часы ВКЛ беларуская мова была адзінай дзяржаўнай мовай пэўны час? Файна, так? А ты чым цікавішся?',
+      nextSlide: 's_43',
+      choices: [],
+      initialize: (scenario) => {
+        var current = scenario.items.s_42; 
+        if(scenario.chosen['s_30_a']){
+          current.background = 'movie.jpg';
+        }
+        if(scenario.chosen['s_30_b']){
+          current.background = 'cafe.jpg';
+          
+        }
+        if(scenario.chosen['s_30_c']){
+          current.background = 'park.jpg';        
+        }
+      }
+    },    
+    s_43: {
+      background: 'movie.jpg',
+      actorImg: 'MC.png',
+      message: 'Ты не поверишь, я таксам  историей увлекался, только всемирной! Ну, если честно, забросил это дело. Сейчас мне больше программирование интересно. Там деньги, да и нравится мне это...',
+      nextSlide: 's_44',
+      choices: [],
+      initialize: (scenario) => {
+        var current = scenario.items.s_43; 
+        if(scenario.chosen['s_30_a']){
+          current.background = 'movie.jpg';
+        }
+        if(scenario.chosen['s_30_b']){
+          current.background = 'cafe.jpg';
+          
+        }
+        if(scenario.chosen['s_30_c']){
+          current.background = 'park.jpg';        
+        }
+      }
+    },    
+    s_44: {
+      background: 'movie.jpg',
+      actorImg: 'LI.png',
+      message: 'Значыць, цябе цікавяць грошы?',
+      nextSlide: 's_45',
+      choices: [],
+      initialize: (scenario) => {
+        var current = scenario.items.s_44; 
+        if(scenario.chosen['s_30_a']){
+          current.background = 'movie.jpg';
+        }
+        if(scenario.chosen['s_30_b']){
+          current.background = 'cafe.jpg';
+          
+        }
+        if(scenario.chosen['s_30_c']){
+          current.background = 'park.jpg';        
+        }
+      }
+    },    
+    s_45: {
+      background: 'movie.jpg',
+      actorImg: 'MC.png',
+      message: 'Не, я же говорю - тут больше душа к этому лежит. Хотя я и жалею немного, что бросил историю...',
+      nextSlide: 's_46',
+      choices: [],
+      initialize: (scenario) => {
+        var current = scenario.items.s_45; 
+        if(scenario.chosen['s_30_a']){
+          current.background = 'movie.jpg';
+        }
+        if(scenario.chosen['s_30_b']){
+          current.background = 'cafe.jpg';
+          
+        }
+        if(scenario.chosen['s_30_c']){
+          current.background = 'park.jpg';        
+        }
+      }
+    },    
+    s_46: {
+      background: 'movie.jpg',
+      actorImg: 'LI.png',
+      message: 'Нічога, будзеш са мной камунікаваць - усё вернецца;)',
+      nextSlide: 's_47',
+      choices: [],
+      initialize: (scenario) => {
+        var current = scenario.items.s_46; 
+        if(scenario.chosen['s_30_a']){
+          current.background = 'movie.jpg';
+        }
+        if(scenario.chosen['s_30_b']){
+          current.background = 'cafe.jpg';
+          
+        }
+        if(scenario.chosen['s_30_c']){
+          current.background = 'park.jpg';        
+        }
+      }
+    },    
+    s_47: {
+      background: 'movie.jpg',
+      actorImg: 'MC.png',
+      message: 'Слушай, а давай куды-небудзь еще сходим, калі ў цябе будет свободное время?',
+      nextSlide: 's_48',
+      choices: [],
+      initialize: (scenario) => {
+        var current = scenario.items.s_47; 
+        if(scenario.chosen['s_30_a']){
+          current.background = 'movie.jpg';
+        }
+        if(scenario.chosen['s_30_b']){
+          current.background = 'cafe.jpg';
+          
+        }
+        if(scenario.chosen['s_30_c']){
+          current.background = 'park.jpg';        
+        }
+      }
+    },    
+    s_48: {
+      background: 'movie.jpg',
+      actorImg: 'LI.png',
+      message: 'Это тяжко - разговаривать в нашей стране на беларускай мове… TO BE CONTINUED',
+      nextSlide: 's_49',
+      choices: [],
+      initialize: (scenario) => {
+        var current = scenario.items.s_48; 
+        if(scenario.chosen['s_30_a']){
+          current.background = 'movie.jpg';
+        }
+        if(scenario.chosen['s_30_b']){
+          current.background = 'cafe.jpg';
+          
+        }
+        if(scenario.chosen['s_30_c']){
+          current.background = 'park.jpg';        
+        }
+      }
+    },    
+    s_49: {
+      background: 'home.jpg',
+      actorImg: 'MC.png',
+      message: 'Мам, слушай, а почему мы в семье по-белорусски не разговариваем?',
+      nextSlide: 's_50',
+      choices: []
+    },   
+    s_50: {
+      background: 'home.jpg',
+      actorImg: 'mom.png',
+      message: 'А кто его знает, сынок? Все не разговаривают и мы не разговариваем. Сегодня это не особенно нужно, понимаешь? Мова только в книгах и на плакатах.',
+      nextSlide: 's_51',
+      choices: []
+    },    
+    s_51: {
+      background: 'home.jpg',
+      actorImg: 'MC.png',
+      message: [],
+      nextSlide: 's_52',
+      choices: [
+        {
+          id: 'a',
+          text: 'А может мы не должны быть как все? Я вот сегодня с одним человеком познакомился... Она сама решила по-белорусски говорить. Это ее выбор был.',
+          effects: [],
+        },
+        {
+          id: 'a',
+          text: 'Ну да, как-то так всё, ты права, мам.',
+          effects: [],
+        },
+        {
+          id: 'c',
+          text: 'Да, белорусский язык уже изжил себя. Это как латынь. Время его уже прошло, я думаю...',
+          effects: []
+        }
+      ]
+    },
+    s_52: {
+      background: 'home.jpg',
+      actorImg: 'MC.png',
+      message: 'Маам, какую майку мне надеть  - с Джобсом или с Маском?',
+      nextSlide: 's_53',
+      choices: []
+    },    
+    s_53: {
+      background: 'home.jpg',
+      actorImg: 'mom.png',
+      message: 'Что-то ты сегодня сам на себя не похож - что-то важное в школе?',
+      nextSlide: 's_54',
+      choices: []
+    },    
+    s_54: {
+      background: 'home.jpg',
+      actorImg: 'MC.png',
+      message: 'Ну, может ... У нас IT-день, так что будут крутые мужики выступать. Может что-то важное возьму для себя. Для будущего айтишника важны связи!',
+      nextSlide: 's_55',
+      choices: []
+    },    
+    s_55: {
+      background: 'school.jpg',
+      actorImg: 'Startuper.png',
+      message: 'Hi, guys, I\'m Max! Whats up? Ладно-ладно, я и по-нашему еще не разучился. Просто уже второй год живу в Лондоне. Стипендию за границей получить не так тяжело, как вы думаете. И тут главное - не ваши желания,даже не опыт и знания, а ваша изюминка, цели, которые вы реально поставили... У каждого - свое. Не забывайте про то, что делает вас уникальным...',
+      nextSlide: 's_56',
+      choices: []
+    },    
+    s_56: {
+      background: 'school.jpg',
+      actorImg: 'Coworking man.png',
+      message: 'Спадарства! Вітаю! Я хачу ўсіх вас запрасіць да сябе ў каворкінг! Я лічу, што кожнаму з нас будзе там зручна і ўтульна! Паколькі вы маладыя і грошай у вас , я мяркую, ня так і шмат, то я гатовы ўзяць некалькі чалавек бескаштоўна пад сваю апеку! Я веру, што разам мы пабудуем вам вартую будучыню!',
+      nextSlide: 's_57',
+      choices: []
+    },    
+    s_57: {
+      background: 'school.jpg',
+      actorImg: 'Accelerator man.png',
+      message: 'Уж не знаю, что вы поняли из речи предыдущего оратора, но я буду говорить на языке, который все знают и все понимают. И вообще, хочу вам сказать, что скоро в мире остануться только три языка - английский, китайский и Java Script. Про остальные можете смело забыть. Гуманитарии вымирают! Если вы чувствуете себя способным на что-то значительное, сделайте все, чтобы это значительное пришлось на IT-сферу.  IT - это деньги, это признание, это власть. ',
+      nextSlide: 's_58',
+      choices: []
+    },    
+    s_58: {
+      background: 'school.jpg',
+      actorImg: 'Accelerator man.png',
+      message: 'Запомните - каждое ваше действие может вам помочь в будущем, а может не помочь. В 21 веке всех, кто ошибется с выбором профессии, заменят роботы. Если вы в IT, вы выиграете, я обещаю! И запомните, мое имя - Виктор. Есть идеи? Готовы работать по-взрослому? Приглашаем в наш акселератор!',
+      nextSlide: 's_59',
+      choices: []
+    },    
+    s_59: {
+      background: 'school.jpg',
+      actorImg: 'MC.png',
+      message: 'Хмм, что бы выбрать... О, сейчас глянем, что народ берет!',
+      nextSlide: 's_20',
+      choices: []
+    },
 
   }
 };

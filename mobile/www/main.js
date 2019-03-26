@@ -144,7 +144,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".location {height: 100%;}\r\n.scene {\r\n    position: absolute;\r\n    top: 100px; \r\n    margin: 0 0 2em 0;\r\n    padding: 0;\r\n    width: 75%;\r\n}\r\n.message  {\r\n    position: relative;\r\n    left: 0;\r\n    background-color: #00BFFF;\r\n    margin: .5em;\r\n    padding: .5em .5em;\r\n    border-radius: 4px;\r\n    color: white;\r\n}\r\n.hidden {\r\n    display: none;\r\n}\r\n.actor{\r\n    height: 30vh;\r\n}\r\n.actorName{\r\n    position: relative;\r\n    left: 0;\r\n    background-color: #00BFFF;\r\n    margin: .5em;\r\n    padding: .5em .5em;\r\n    border-radius: 4px;\r\n    color: #2A52BE;\r\n}\r\n.choices{\r\n    list-style-type: none;\r\n    }\r\n.choices li {\r\n        cursor: pointer;\r\n        position: relative;\r\n        left: 0;\r\n        background-color: #EEE;\r\n        margin: .5em;\r\n        padding: .3em 0;\r\n        /* height: 1.6em; */\r\n        border-radius: 4px;\r\n    }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ2FtZS9nYW1lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsV0FBVyxhQUFhLENBQUM7QUFDekI7SUFDSSxtQkFBbUI7SUFDbkIsV0FBVztJQUNYLGtCQUFrQjtJQUNsQixXQUFXO0lBQ1gsV0FBVztDQUNkO0FBQ0Q7SUFDSSxtQkFBbUI7SUFDbkIsUUFBUTtJQUNSLDBCQUEwQjtJQUMxQixhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLG1CQUFtQjtJQUNuQixhQUFhO0NBQ2hCO0FBQ0Q7SUFDSSxjQUFjO0NBQ2pCO0FBRUQ7SUFDSSxhQUFhO0NBQ2hCO0FBQ0Q7SUFDSSxtQkFBbUI7SUFDbkIsUUFBUTtJQUNSLDBCQUEwQjtJQUMxQixhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLG1CQUFtQjtJQUNuQixlQUFlO0NBQ2xCO0FBQ0Q7SUFDSSxzQkFBc0I7S0FDckI7QUFDRDtRQUNJLGdCQUFnQjtRQUNoQixtQkFBbUI7UUFDbkIsUUFBUTtRQUNSLHVCQUF1QjtRQUN2QixhQUFhO1FBQ2IsZ0JBQWdCO1FBQ2hCLG9CQUFvQjtRQUNwQixtQkFBbUI7S0FDdEIiLCJmaWxlIjoic3JjL2FwcC9nYW1lL2dhbWUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5sb2NhdGlvbiB7aGVpZ2h0OiAxMDAlO31cclxuLnNjZW5lIHtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHRvcDogMTAwcHg7IFxyXG4gICAgbWFyZ2luOiAwIDAgMmVtIDA7XHJcbiAgICBwYWRkaW5nOiAwO1xyXG4gICAgd2lkdGg6IDc1JTtcclxufVxyXG4ubWVzc2FnZSAge1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgbGVmdDogMDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMwMEJGRkY7XHJcbiAgICBtYXJnaW46IC41ZW07XHJcbiAgICBwYWRkaW5nOiAuNWVtIC41ZW07XHJcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbn1cclxuLmhpZGRlbiB7XHJcbiAgICBkaXNwbGF5OiBub25lO1xyXG59XHJcblxyXG4uYWN0b3J7XHJcbiAgICBoZWlnaHQ6IDMwdmg7XHJcbn1cclxuLmFjdG9yTmFtZXtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIGxlZnQ6IDA7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDBCRkZGO1xyXG4gICAgbWFyZ2luOiAuNWVtO1xyXG4gICAgcGFkZGluZzogLjVlbSAuNWVtO1xyXG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xyXG4gICAgY29sb3I6ICMyQTUyQkU7XHJcbn1cclxuLmNob2ljZXN7XHJcbiAgICBsaXN0LXN0eWxlLXR5cGU6IG5vbmU7XHJcbiAgICB9XHJcbiAgICAuY2hvaWNlcyBsaSB7XHJcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgICAgICBsZWZ0OiAwO1xyXG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNFRUU7XHJcbiAgICAgICAgbWFyZ2luOiAuNWVtO1xyXG4gICAgICAgIHBhZGRpbmc6IC4zZW0gMDtcclxuICAgICAgICAvKiBoZWlnaHQ6IDEuNmVtOyAqL1xyXG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcclxuICAgIH0iXX0= */"
+module.exports = ".location {height: 100%;}\r\n.scene {\r\n    position: absolute;\r\n    top: 100px;\r\n    left: 2.5%;\r\n    width: 95%;\r\n    padding: 0;\r\n}\r\n.scene img{\r\n    float: right;\r\n}\r\n.scene.player img {\r\n    float: none;\r\n}\r\n.message  {\r\n    position: relative;\r\n    left: 0;\r\n    background-color: #00BFFF;\r\n    margin: .5em;\r\n    padding: .5em .5em;\r\n    border-radius: 4px;\r\n    color: white;\r\n}\r\n.hidden {\r\n    display: none;\r\n}\r\n.actor{\r\n    height: 30vh;\r\n}\r\n.actorName{\r\n    position: relative;\r\n    left: 0;\r\n    background-color: #00BFFF;\r\n    margin: .5em;\r\n    padding: .5em .5em;\r\n    border-radius: 4px;\r\n    color: #2A52BE;\r\n    clear: both;\r\n}\r\n.choices{\r\n    list-style-type: none;\r\n    }\r\n.choices li {\r\n        cursor: pointer;\r\n        position: relative;\r\n        left: 0;\r\n        background-color: #EEE;\r\n        margin: .5em;\r\n        padding: .3em 0;\r\n        /* height: 1.6em; */\r\n        border-radius: 4px;\r\n    }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ2FtZS9nYW1lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsV0FBVyxhQUFhLENBQUM7QUFDekI7SUFDSSxtQkFBbUI7SUFDbkIsV0FBVztJQUNYLFdBQVc7SUFDWCxXQUFXO0lBQ1gsV0FBVztDQUNkO0FBQ0Q7SUFDSSxhQUFhO0NBQ2hCO0FBQ0Q7SUFDSSxZQUFZO0NBQ2Y7QUFFRDtJQUNJLG1CQUFtQjtJQUNuQixRQUFRO0lBQ1IsMEJBQTBCO0lBQzFCLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsbUJBQW1CO0lBQ25CLGFBQWE7Q0FDaEI7QUFDRDtJQUNJLGNBQWM7Q0FDakI7QUFFRDtJQUNJLGFBQWE7Q0FDaEI7QUFDRDtJQUNJLG1CQUFtQjtJQUNuQixRQUFRO0lBQ1IsMEJBQTBCO0lBQzFCLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsbUJBQW1CO0lBQ25CLGVBQWU7SUFDZixZQUFZO0NBQ2Y7QUFDRDtJQUNJLHNCQUFzQjtLQUNyQjtBQUNEO1FBQ0ksZ0JBQWdCO1FBQ2hCLG1CQUFtQjtRQUNuQixRQUFRO1FBQ1IsdUJBQXVCO1FBQ3ZCLGFBQWE7UUFDYixnQkFBZ0I7UUFDaEIsb0JBQW9CO1FBQ3BCLG1CQUFtQjtLQUN0QiIsImZpbGUiOiJzcmMvYXBwL2dhbWUvZ2FtZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmxvY2F0aW9uIHtoZWlnaHQ6IDEwMCU7fVxyXG4uc2NlbmUge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgdG9wOiAxMDBweDtcclxuICAgIGxlZnQ6IDIuNSU7XHJcbiAgICB3aWR0aDogOTUlO1xyXG4gICAgcGFkZGluZzogMDtcclxufVxyXG4uc2NlbmUgaW1ne1xyXG4gICAgZmxvYXQ6IHJpZ2h0O1xyXG59XHJcbi5zY2VuZS5wbGF5ZXIgaW1nIHtcclxuICAgIGZsb2F0OiBub25lO1xyXG59XHJcblxyXG4ubWVzc2FnZSAge1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgbGVmdDogMDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMwMEJGRkY7XHJcbiAgICBtYXJnaW46IC41ZW07XHJcbiAgICBwYWRkaW5nOiAuNWVtIC41ZW07XHJcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbn1cclxuLmhpZGRlbiB7XHJcbiAgICBkaXNwbGF5OiBub25lO1xyXG59XHJcblxyXG4uYWN0b3J7XHJcbiAgICBoZWlnaHQ6IDMwdmg7XHJcbn1cclxuLmFjdG9yTmFtZXtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIGxlZnQ6IDA7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDBCRkZGO1xyXG4gICAgbWFyZ2luOiAuNWVtO1xyXG4gICAgcGFkZGluZzogLjVlbSAuNWVtO1xyXG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xyXG4gICAgY29sb3I6ICMyQTUyQkU7XHJcbiAgICBjbGVhcjogYm90aDtcclxufVxyXG4uY2hvaWNlc3tcclxuICAgIGxpc3Qtc3R5bGUtdHlwZTogbm9uZTtcclxuICAgIH1cclxuICAgIC5jaG9pY2VzIGxpIHtcclxuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgICAgIGxlZnQ6IDA7XHJcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI0VFRTtcclxuICAgICAgICBtYXJnaW46IC41ZW07XHJcbiAgICAgICAgcGFkZGluZzogLjNlbSAwO1xyXG4gICAgICAgIC8qIGhlaWdodDogMS42ZW07ICovXHJcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xyXG4gICAgfSJdfQ== */"
 
 /***/ }),
 
@@ -155,7 +155,7 @@ module.exports = ".location {height: 100%;}\r\n.scene {\r\n    position: absolut
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div [class.hidden]=\"gameInitialized\">\n\n\n\n  <label>Имя:\n    <input [(ngModel)]=\"playerName\" placeholder=\"твоё имя\" />\n  </label>\n  <button (click)=\"initialize()\">Начать</button>\n</div>\n\n<div (click)=\"onClick()\" [class.hidden]=\"!gameInitialized\">\n  <img class=\"location\" src=\"./assets/{{currentSlide.background}}\" />\n  <div class=\"scene\" style=\"\">\n    <img class=\"actor\" src=\"./assets/{{currentSlide.actorImg}}\" />\n    <div class=\"actorName\">\n      {{actorName}}:\n    </div>\n    <div class=\"message\">\n      {{currentSlide.message}}\n    </div>\n    <ul class=\"choices\">\n      <li *ngFor=\"let choice of currentSlide.choices\" (click)=\"onSelect(choice, $event)\">\n        {{choice.text}}\n      </li>\n    </ul>\n  </div>\n</div>"
+module.exports = "<div [class.hidden]=\"gameInitialized\">\n\n\n\n  <label>Имя:\n    <input [(ngModel)]=\"playerName\" placeholder=\"твоё имя\" />\n  </label>\n  <button (click)=\"initialize()\">Начать</button>\n</div>\n\n<div (click)=\"onClick()\" [class.hidden]=\"!gameInitialized\">\n  <img class=\"location\" src=\"./assets/{{currentSlide.background}}\" />\n  <div class=\"scene\" [class.player]=\"isPlayerActor\">\n    <img class=\"actor\" src=\"./assets/{{currentSlide.actorImg}}\" />\n    <div class=\"actorName\">\n      {{actorName}}:\n    </div>\n    <div class=\"message\">\n      {{currentSlide.message}}\n    </div>\n    <ul class=\"choices\">\n      <li *ngFor=\"let choice of currentSlide.choices\" (click)=\"onSelect(choice, $event)\">\n        {{choice.text}}\n      </li>\n    </ul>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -241,10 +241,17 @@ var GameComponent = /** @class */ (function () {
     };
     Object.defineProperty(GameComponent.prototype, "actorName", {
         get: function () {
-            var actor = this.currentSlide.actorImg;
-            if (actor == 'MC.png')
+            if (this.isPlayerActor)
                 return this.playerName;
-            return this.sc.actorNames[actor];
+            return this.sc.actorNames[this.currentSlide.actorImg];
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(GameComponent.prototype, "isPlayerActor", {
+        get: function () {
+            var actor = this.currentSlide.actorImg;
+            return actor == 'MC.png';
         },
         enumerable: true,
         configurable: true
@@ -447,7 +454,7 @@ var SCENARIO = {
             background: 'school.jpg',
             actorImg: 'MC.png',
             message: 'Ну всё, наконец-то уроки закончились… Пятница, красота! Куда б пойти?',
-            nextSlide: 's_19',
+            nextSlide: 's_18_1',
             choices: [
                 {
                     id: 'a',
@@ -465,6 +472,13 @@ var SCENARIO = {
                     effects: []
                 }
             ]
+        },
+        s_18_1: {
+            background: 'school.jpg',
+            actorImg: 'MC.png',
+            message: 'Так, осталось только в магазин за мороженным - и в путь!',
+            nextSlide: 's_19',
+            choices: []
         },
         s_19: {
             background: 'store.jpg',
@@ -700,8 +714,8 @@ var SCENARIO = {
         s_37: {
             background: 'movie.jpg',
             actorImg: 'MC.png',
-            message: 'Это тяжко - разговаривать в нашей стране на беларускай мове… TO BE CONTINUED',
-            nextSlide: 's_37',
+            message: 'Это тяжко - разговаривать в нашей стране на беларускай мове!',
+            nextSlide: 's_38',
             choices: [],
             initialize: function (scenario) {
                 var current = scenario.items.s_37;
@@ -710,44 +724,314 @@ var SCENARIO = {
                 }
                 if (scenario.chosen['s_30_b']) {
                     current.background = 'cafe.jpg';
-                    // current.message = 'Смачная кава?';
                 }
                 if (scenario.chosen['s_30_c']) {
                     current.background = 'park.jpg';
-                    // current.message = 'Якое цудоўнае надвор\'е!';
                 }
             }
         },
-        oios_19: {
-            background: '',
-            actorImg: 'MC.png',
-            message: 'Так, осталось только в магазин за мороженным-  и в путь!',
-            nextSlide: 's_19',
+        s_38: {
+            background: 'movie.jpg',
+            actorImg: 'LI.png',
+            message: 'Часам гэта так, але збольшага ўсе падтрымліваюць. Бацькі прынялі, праўда, сябры некаторыя вырашылі, што гэта занадта, але так нават лепш…',
+            nextSlide: 's_39',
             choices: [],
             initialize: function (scenario) {
-                if (scenario.chosen['s_18_a']) {
-                    scenario.items.third.background = 'home.jpg';
+                var current = scenario.items.s_38;
+                if (scenario.chosen['s_30_a']) {
+                    current.background = 'movie.jpg';
+                }
+                if (scenario.chosen['s_30_b']) {
+                    current.background = 'cafe.jpg';
+                }
+                if (scenario.chosen['s_30_c']) {
+                    current.background = 'park.jpg';
                 }
             }
         },
-        fourth: {
-            background: 'accelerator.jpg',
-            actorImg: 'Ales.png',
-            message: 'Slide 4',
-            nextSlide: 'fifth',
-        },
-        fifth: {
-            background: 'home.jpg',
-            actorImg: 'Daria.png',
-            message: 'Daria speaking slide 5',
-            nextSlide: 'sixth',
-        },
-        sixth: {
-            background: 'cafe.jpg',
+        s_39: {
+            background: 'movie.jpg',
             actorImg: 'MC.png',
-            message: 'FINITA',
-            nextSlide: null
-        }
+            message: 'Знаешь, я цябе даже паважаю!',
+            nextSlide: 's_40',
+            choices: [],
+            initialize: function (scenario) {
+                var current = scenario.items.s_39;
+                if (scenario.chosen['s_30_a']) {
+                    current.background = 'movie.jpg';
+                }
+                if (scenario.chosen['s_30_b']) {
+                    current.background = 'cafe.jpg';
+                }
+                if (scenario.chosen['s_30_c']) {
+                    current.background = 'park.jpg';
+                }
+            }
+        },
+        s_40: {
+            background: 'movie.jpg',
+            actorImg: 'LI.png',
+            message: 'Вай, ты рэзка стаў беларускамоўным? Я таксама цябе ДАЖЕ паважаю:)',
+            nextSlide: 's_41',
+            choices: [],
+            initialize: function (scenario) {
+                var current = scenario.items.s_40;
+                if (scenario.chosen['s_30_a']) {
+                    current.background = 'movie.jpg';
+                }
+                if (scenario.chosen['s_30_b']) {
+                    current.background = 'cafe.jpg';
+                }
+                if (scenario.chosen['s_30_c']) {
+                    current.background = 'park.jpg';
+                }
+            }
+        },
+        s_41: {
+            background: 'movie.jpg',
+            actorImg: 'MC.png',
+            message: 'А чым ты вообще интересуешься?',
+            nextSlide: 's_42',
+            choices: [],
+            initialize: function (scenario) {
+                var current = scenario.items.s_41;
+                if (scenario.chosen['s_30_a']) {
+                    current.background = 'movie.jpg';
+                }
+                if (scenario.chosen['s_30_b']) {
+                    current.background = 'cafe.jpg';
+                }
+                if (scenario.chosen['s_30_c']) {
+                    current.background = 'park.jpg';
+                }
+            }
+        },
+        s_42: {
+            background: 'movie.jpg',
+            actorImg: 'LI.png',
+            message: 'Ну, мяне вельмі цікавіць гісторыя. Ведаеш, у часы ВКЛ беларуская мова была адзінай дзяржаўнай мовай пэўны час? Файна, так? А ты чым цікавішся?',
+            nextSlide: 's_43',
+            choices: [],
+            initialize: function (scenario) {
+                var current = scenario.items.s_42;
+                if (scenario.chosen['s_30_a']) {
+                    current.background = 'movie.jpg';
+                }
+                if (scenario.chosen['s_30_b']) {
+                    current.background = 'cafe.jpg';
+                }
+                if (scenario.chosen['s_30_c']) {
+                    current.background = 'park.jpg';
+                }
+            }
+        },
+        s_43: {
+            background: 'movie.jpg',
+            actorImg: 'MC.png',
+            message: 'Ты не поверишь, я таксам  историей увлекался, только всемирной! Ну, если честно, забросил это дело. Сейчас мне больше программирование интересно. Там деньги, да и нравится мне это...',
+            nextSlide: 's_44',
+            choices: [],
+            initialize: function (scenario) {
+                var current = scenario.items.s_43;
+                if (scenario.chosen['s_30_a']) {
+                    current.background = 'movie.jpg';
+                }
+                if (scenario.chosen['s_30_b']) {
+                    current.background = 'cafe.jpg';
+                }
+                if (scenario.chosen['s_30_c']) {
+                    current.background = 'park.jpg';
+                }
+            }
+        },
+        s_44: {
+            background: 'movie.jpg',
+            actorImg: 'LI.png',
+            message: 'Значыць, цябе цікавяць грошы?',
+            nextSlide: 's_45',
+            choices: [],
+            initialize: function (scenario) {
+                var current = scenario.items.s_44;
+                if (scenario.chosen['s_30_a']) {
+                    current.background = 'movie.jpg';
+                }
+                if (scenario.chosen['s_30_b']) {
+                    current.background = 'cafe.jpg';
+                }
+                if (scenario.chosen['s_30_c']) {
+                    current.background = 'park.jpg';
+                }
+            }
+        },
+        s_45: {
+            background: 'movie.jpg',
+            actorImg: 'MC.png',
+            message: 'Не, я же говорю - тут больше душа к этому лежит. Хотя я и жалею немного, что бросил историю...',
+            nextSlide: 's_46',
+            choices: [],
+            initialize: function (scenario) {
+                var current = scenario.items.s_45;
+                if (scenario.chosen['s_30_a']) {
+                    current.background = 'movie.jpg';
+                }
+                if (scenario.chosen['s_30_b']) {
+                    current.background = 'cafe.jpg';
+                }
+                if (scenario.chosen['s_30_c']) {
+                    current.background = 'park.jpg';
+                }
+            }
+        },
+        s_46: {
+            background: 'movie.jpg',
+            actorImg: 'LI.png',
+            message: 'Нічога, будзеш са мной камунікаваць - усё вернецца;)',
+            nextSlide: 's_47',
+            choices: [],
+            initialize: function (scenario) {
+                var current = scenario.items.s_46;
+                if (scenario.chosen['s_30_a']) {
+                    current.background = 'movie.jpg';
+                }
+                if (scenario.chosen['s_30_b']) {
+                    current.background = 'cafe.jpg';
+                }
+                if (scenario.chosen['s_30_c']) {
+                    current.background = 'park.jpg';
+                }
+            }
+        },
+        s_47: {
+            background: 'movie.jpg',
+            actorImg: 'MC.png',
+            message: 'Слушай, а давай куды-небудзь еще сходим, калі ў цябе будет свободное время?',
+            nextSlide: 's_48',
+            choices: [],
+            initialize: function (scenario) {
+                var current = scenario.items.s_47;
+                if (scenario.chosen['s_30_a']) {
+                    current.background = 'movie.jpg';
+                }
+                if (scenario.chosen['s_30_b']) {
+                    current.background = 'cafe.jpg';
+                }
+                if (scenario.chosen['s_30_c']) {
+                    current.background = 'park.jpg';
+                }
+            }
+        },
+        s_48: {
+            background: 'movie.jpg',
+            actorImg: 'LI.png',
+            message: 'Это тяжко - разговаривать в нашей стране на беларускай мове… TO BE CONTINUED',
+            nextSlide: 's_49',
+            choices: [],
+            initialize: function (scenario) {
+                var current = scenario.items.s_48;
+                if (scenario.chosen['s_30_a']) {
+                    current.background = 'movie.jpg';
+                }
+                if (scenario.chosen['s_30_b']) {
+                    current.background = 'cafe.jpg';
+                }
+                if (scenario.chosen['s_30_c']) {
+                    current.background = 'park.jpg';
+                }
+            }
+        },
+        s_49: {
+            background: 'home.jpg',
+            actorImg: 'MC.png',
+            message: 'Мам, слушай, а почему мы в семье по-белорусски не разговариваем?',
+            nextSlide: 's_50',
+            choices: []
+        },
+        s_50: {
+            background: 'home.jpg',
+            actorImg: 'mom.png',
+            message: 'А кто его знает, сынок? Все не разговаривают и мы не разговариваем. Сегодня это не особенно нужно, понимаешь? Мова только в книгах и на плакатах.',
+            nextSlide: 's_51',
+            choices: []
+        },
+        s_51: {
+            background: 'home.jpg',
+            actorImg: 'MC.png',
+            message: [],
+            nextSlide: 's_52',
+            choices: [
+                {
+                    id: 'a',
+                    text: 'А может мы не должны быть как все? Я вот сегодня с одним человеком познакомился... Она сама решила по-белорусски говорить. Это ее выбор был.',
+                    effects: [],
+                },
+                {
+                    id: 'a',
+                    text: 'Ну да, как-то так всё, ты права, мам.',
+                    effects: [],
+                },
+                {
+                    id: 'c',
+                    text: 'Да, белорусский язык уже изжил себя. Это как латынь. Время его уже прошло, я думаю...',
+                    effects: []
+                }
+            ]
+        },
+        s_52: {
+            background: 'home.jpg',
+            actorImg: 'MC.png',
+            message: 'Маам, какую майку мне надеть  - с Джобсом или с Маском?',
+            nextSlide: 's_53',
+            choices: []
+        },
+        s_53: {
+            background: 'home.jpg',
+            actorImg: 'mom.png',
+            message: 'Что-то ты сегодня сам на себя не похож - что-то важное в школе?',
+            nextSlide: 's_54',
+            choices: []
+        },
+        s_54: {
+            background: 'home.jpg',
+            actorImg: 'MC.png',
+            message: 'Ну, может ... У нас IT-день, так что будут крутые мужики выступать. Может что-то важное возьму для себя. Для будущего айтишника важны связи!',
+            nextSlide: 's_55',
+            choices: []
+        },
+        s_55: {
+            background: 'school.jpg',
+            actorImg: 'Startuper.png',
+            message: 'Hi, guys, I\'m Max! Whats up? Ладно-ладно, я и по-нашему еще не разучился. Просто уже второй год живу в Лондоне. Стипендию за границей получить не так тяжело, как вы думаете. И тут главное - не ваши желания,даже не опыт и знания, а ваша изюминка, цели, которые вы реально поставили... У каждого - свое. Не забывайте про то, что делает вас уникальным...',
+            nextSlide: 's_56',
+            choices: []
+        },
+        s_56: {
+            background: 'school.jpg',
+            actorImg: 'Coworking man.png',
+            message: 'Спадарства! Вітаю! Я хачу ўсіх вас запрасіць да сябе ў каворкінг! Я лічу, што кожнаму з нас будзе там зручна і ўтульна! Паколькі вы маладыя і грошай у вас , я мяркую, ня так і шмат, то я гатовы ўзяць некалькі чалавек бескаштоўна пад сваю апеку! Я веру, што разам мы пабудуем вам вартую будучыню!',
+            nextSlide: 's_57',
+            choices: []
+        },
+        s_57: {
+            background: 'school.jpg',
+            actorImg: 'Accelerator man.png',
+            message: 'Уж не знаю, что вы поняли из речи предыдущего оратора, но я буду говорить на языке, который все знают и все понимают. И вообще, хочу вам сказать, что скоро в мире остануться только три языка - английский, китайский и Java Script. Про остальные можете смело забыть. Гуманитарии вымирают! Если вы чувствуете себя способным на что-то значительное, сделайте все, чтобы это значительное пришлось на IT-сферу.  IT - это деньги, это признание, это власть. ',
+            nextSlide: 's_58',
+            choices: []
+        },
+        s_58: {
+            background: 'school.jpg',
+            actorImg: 'Accelerator man.png',
+            message: 'Запомните - каждое ваше действие может вам помочь в будущем, а может не помочь. В 21 веке всех, кто ошибется с выбором профессии, заменят роботы. Если вы в IT, вы выиграете, я обещаю! И запомните, мое имя - Виктор. Есть идеи? Готовы работать по-взрослому? Приглашаем в наш акселератор!',
+            nextSlide: 's_59',
+            choices: []
+        },
+        s_59: {
+            background: 'school.jpg',
+            actorImg: 'MC.png',
+            message: 'Хмм, что бы выбрать... О, сейчас глянем, что народ берет!',
+            nextSlide: 's_20',
+            choices: []
+        },
     }
 };
 var SCENARIO_old = {
@@ -1113,7 +1397,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\ivana\Documents\dev\angular-ex-2\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /mnt/c/Users/ivana/Documents/dev/angular-ex-2/src/main.ts */"./src/main.ts");
 
 
 /***/ })

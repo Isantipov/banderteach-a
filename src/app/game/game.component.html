@@ -10,7 +10,7 @@
 
 <div (click)="onClick()" [class.hidden]="!gameInitialized">
   <img class="location" src="./assets/{{currentSlide.background}}" />
-  <div class="scene" style="">
+  <div class="scene" [class.player]="isPlayerActor">
     <img class="actor" src="./assets/{{currentSlide.actorImg}}" />
     <div class="actorName">
       {{actorName}}:
