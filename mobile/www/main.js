@@ -329,7 +329,7 @@ var SCENARIO = {
         'e': { type: 'sum', values: [] }
     },
     chosen: {},
-    entry: 's_1',
+    entry: 's_68',
     items: {
         's_1': {
             background: 'school.jpg',
@@ -1142,6 +1142,7 @@ var SCENARIO = {
             choices: []
         },
         s_71: {
+            id: 's_71',
             background: 'home.jpg',
             actorImg: 'MC.png',
             message: null,
@@ -1153,7 +1154,7 @@ var SCENARIO = {
                     effects: [],
                 },
                 {
-                    id: 'a',
+                    id: 'b',
                     text: 'Моё место в стартап-акселераторе',
                     effects: [],
                 },
@@ -1165,6 +1166,7 @@ var SCENARIO = {
             ]
         },
         s_72: {
+            id: 's_72',
             background: 'home.jpg',
             actorImg: 'MC.png',
             message: '',

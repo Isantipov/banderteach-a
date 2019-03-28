@@ -46,7 +46,7 @@ export const SCENARIO: any = {
   },
   chosen: {},
 
-  entry: 's_1',
+  entry: 's_68',
   items: {
     's_1': {
       background: 'school.jpg',
@@ -871,6 +871,7 @@ export const SCENARIO: any = {
       choices: []
     },    
     s_71: {
+      id: 's_71',
       background: 'home.jpg',
       actorImg: 'MC.png',
       message: null,
@@ -882,7 +883,7 @@ export const SCENARIO: any = {
           effects: [],
         },
         {
-          id: 'a',
+          id: 'b',
           text: 'Моё место в стартап-акселераторе',
           effects: [],
         },
@@ -894,6 +895,7 @@ export const SCENARIO: any = {
       ]
     }, 
     s_72: {
+      id: 's_72',
       background: 'home.jpg',
       actorImg: 'MC.png',
       message: '',
